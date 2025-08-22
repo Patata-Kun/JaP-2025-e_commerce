@@ -2,11 +2,12 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>eMercado - Todo lo que busques está aquí</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <title>eMercado - Iniciar Sesión</title>
+  
+  <!-- Fuentes y estilos -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,900" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -16,31 +17,39 @@
     <div class="container">
       <div class="login-container">
         <h2 class="text-center mb-4">Iniciar Sesión</h2>
+        
+        <!-- FORMULARIO -->
         <form id="loginForm">
-          <!-- Usuario -->
+          <!-- USUARIO -->
           <div class="mb-3">
             <label for="usuario" class="form-label">Usuario</label>
-            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingrese su usuario">
+            <input type="text" class="form-control" id="usuario" name="usuario" required>
           </div>
-          <!-- Contraseña -->
+
+          <!-- CONTRASEÑA -->
           <div class="mb-3">
             <label for="contraseña" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña">
+            <input type="password" class="form-control" id="contraseña" name="contraseña" required>
           </div>
-          <!-- Botón Ingresar -->
+
+          <!-- BOTÓN INGRESAR -->
           <button type="submit" class="btn btn-primary w-100">Ingresar</button>
         </form>
       </div>
     </div>
   </main>
 
-  <footer class="text-muted">
+  <footer class="text-muted mt-5">
     <div class="container">
-      <p class="float-end"><a href="#">Volver arriba</a></p>
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
       <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
     </div>
   </footer>
 
+  <!-- Script de login -->
   <script src="js/login.js"></script>
 </body>
+
 </html>
