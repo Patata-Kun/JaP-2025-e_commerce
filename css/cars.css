@@ -130,17 +130,18 @@ footer{
     margin-top: 100px;
 }
 
+.soldCount{
+  color: darkslategrey;
+  text-align: right;
+  font-weight: bold;  
+}
 
+.priceValueSold{
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.priceValueSold .price {
+  margin-right: 36rem; /
+}
