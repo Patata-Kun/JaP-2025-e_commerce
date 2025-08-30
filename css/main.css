@@ -6,8 +6,7 @@
   --color-burningFlame: oklch(0.8199 0.1318 64.46);  /* #ffb162 */
   --color-blueFantastic: oklch(0.3471 0.0373 253.36); /* #2c3b4d */
   --color-truffelTrouble: oklch(0.5309 0.1148 37.14);  /* #a35139 */
-  /* --color-anchorfishBlue: oklch(0.264 0.0274 251.05); #1b2632 */
-  --color-anchorfishBlue: #1b2632;
+  --color-anchorfishBlue: oklch(0.264 0.0274 251.05); /* #1b2632 */
   --color-bg: var(--color-grey95); 
   --color-jap: oklch(0.7396 0.1656 65.25); /* #f09100 */
   --color-grey95: oklch(96.115% 0.00011 271.152); /* #f2f2f2 - 95% grey */
@@ -20,6 +19,7 @@
 
 * {
   box-sizing: border-box;
+  color: var(--color-grey10);
 }
 
 body {
@@ -30,14 +30,14 @@ body {
 }
 
 h1 {
-  font: 700 2rem/2.5rem "Inter", sans-serif; /* font-weight, font-size, line-height, font-family */
+  font: 700 clamp(1.25rem, 5vw, 2rem)/2.5rem "Inter", sans-serif; /* font-weight, font-size, line-height, font-family */
 
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: clamp(1rem, 10vw, 6rem);
+  margin-bottom: clamp(1rem, 10vw, 6rem);
 }
 
 h2 {
@@ -61,11 +61,10 @@ button {
   background-color: var(--color-grey95);
   box-shadow: 0 4px 5px -2px oklch(0 0 0 / 0.25);
   border: none;
+  border-radius: 1rem;
 
   max-width: fit-content;
   padding: 1rem;
-
-  border-radius: 1rem;
   align-self: center;
 
   cursor: pointer;
@@ -91,7 +90,7 @@ nav ul {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 1rem clamp(1rem, 16vw, 16rem);
+  padding: 1rem clamp(1rem, 16vw, 16rem); 
   margin: 0;
   list-style: none;
   overflow: hidden;
@@ -123,3 +122,21 @@ footer {
   margin-left: clamp(0.5rem, 16vw, 16rem);
 }
 
+@media (max-width: 1024px) {
+  .main-content{
+    margin-right: clamp(0.5rem, 8vw, 16rem);
+    margin-left: clamp(0.5rem, 8vw, 16rem);
+  }
+
+  footer {
+    position: static;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .main-content {
+    margin-right: clamp(0.5rem, 8vw, 16rem);
+    margin-left: clamp(0.5rem, 8vw, 16rem);
+  }
+}

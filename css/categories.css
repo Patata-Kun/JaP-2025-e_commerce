@@ -1,0 +1,88 @@
+/* contenedor principal de los items de las categorías; representa el borde de 2px alrededor de los productos */
+.categories-container {
+  background-color: none;
+  border: 2px solid var(--color-oatmeal);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 2rem 1rem; /* row-gap column-gap */
+}
+
+/* contenedor de cada producto dentro de las categorías, incluye la imagen y la descripción */
+.categories-product {
+  display: flex;
+  width: 100%;
+  max-height: fit-content;
+  gap: 1rem;
+}
+
+.product-image {
+  box-shadow: 0 4px 5px -2px oklch(0 0 0 / 0.25);
+  border-radius: 0.75rem;
+  max-width: clamp(5rem, 21vw, 21rem);
+  object-fit: cover;
+}
+
+/* contenedor de la descripción de cada producto, incluye el nombre del producto y descripción, precio y la cantidad de vendidos */
+.product-description {
+  background-color: var(--color-grey85);
+  border-radius: 0.75rem;
+  width: 100%;
+  padding: 1rem;
+  max-height: fit-content;
+}
+
+svg {
+  transform: translateY(3px);
+  margin-right: 0.25rem;
+}
+
+/* contenedor del precio de cada producto, incluye su precio y la cantidad de vendidos */
+.product-price-sold {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: baseline; */
+  margin: 0;
+}
+
+.product-description h2 {
+  margin: 0;
+}
+
+.product-price-sold h4, .product-price-sold p {
+  font: 400 0.75rem/1.5rem "Inter", sans-serif;
+  color: var(--color-grey50);
+  margin: 0;
+  line-height: 1;
+}
+
+.product-price-sold p {
+  transform: translateY(25px);
+}
+
+/* <- responsive design -> */
+
+@media (max-width: 1024px) {
+  .categories-product {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .product-image {
+    max-width: 100%;
+  }
+  
+}
+
+/* Resolución Estándar: 1366 x 768 px.
+   Tableta en Modo Vertical: 768 x 1024 px.
+   Smartphone Pequeño (Ej. iPhone SE): 320 x 568 px. */

@@ -1,16 +1,17 @@
+/* contenedor principal del login */
 .login-container {
-  background-color: var(--color-oatmeal);
-  box-shadow: 0 4px 5px -2px oklch(0 0 0 / 0.25);
-  border-radius: 1rem;
-  
-  max-width: 28rem;
-  padding: 2rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   text-align: center;
+
+  background-color: var(--color-grey85);
+  box-shadow: 0 4px 5px -2px oklch(0 0 0 / 0.25);
+  border-radius: 1rem;
+  
+  max-width: 28rem;
+  padding: 2rem;
 }
 
 #login-form {
@@ -19,7 +20,6 @@
   gap: 2rem;
   width: 100%;
 }
-
 
 .login-input {
   background-color: var(--color-grey95);
