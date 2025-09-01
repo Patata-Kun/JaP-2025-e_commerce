@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   
   margin: 0 auto;
   padding: 1rem;
@@ -27,6 +28,7 @@
   border-radius: 0.75rem;
   max-width: clamp(5rem, 21vw, 21rem);
   object-fit: cover;
+  aspect-ratio: 16 / 9;
 }
 
 /* contenedor de la descripción de cada producto, incluye el nombre del producto y descripción, precio y la cantidad de vendidos */
@@ -38,7 +40,7 @@
   max-height: fit-content;
 }
 
-svg {
+.icon-car-type {
   transform: translateY(3px);
   margin-right: 0.25rem;
 }
@@ -57,7 +59,7 @@ svg {
 }
 
 .product-price-sold h4, .product-price-sold p {
-  font: 400 0.75rem/1.5rem "Inter", sans-serif;
+  font: 400 1rem/1.5rem "Inter", sans-serif;
   color: var(--color-grey50);
   margin: 0;
   line-height: 1;
@@ -66,23 +68,3 @@ svg {
 .product-price-sold p {
   transform: translateY(25px);
 }
-
-/* <- responsive design -> */
-
-@media (max-width: 1024px) {
-  .categories-product {
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .product-image {
-    max-width: 100%;
-  }
-  
-}
-
-/* Resolución Estándar: 1366 x 768 px.
-   Tableta en Modo Vertical: 768 x 1024 px.
-   Smartphone Pequeño (Ej. iPhone SE): 320 x 568 px. */

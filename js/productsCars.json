@@ -10,7 +10,7 @@
         "Batería Blade ultra segura con una autonomía de hasta 380 km (según el NEDC).",
         "Hasta 6 airbags."
       ],
-      "cost": 19990,
+      "cost": "19.990",
       "currency": "USD",
       "image":"https://byd.com.uy/wp-content/uploads/2024/01/portada_bydseagull.png",
       "icon":"Car",
@@ -24,7 +24,7 @@
         "Batería Blade ultra segura con tecnología Cell To Body (CBT). Autonomía de hasta 380 km (según el NEDC).",
         "100% eléctrico."
       ],
-      "cost": 27990,
+      "cost": "27.990",
       "currency": "USD",
       "image": "https://byd.com.uy/wp-content/uploads/2024/08/yuanpro_dest.png",
       "icon": "SUV",
@@ -38,7 +38,7 @@
         "Batería Blade ultra segura con tecnología Cell To Body (CBT). Autonomía de hasta 520 km (según versión).",
         "Sistema Intelligent Torque Adaptation Control (ITAC) (en versión all-wheel drive)."
       ],
-      "cost": 50990,
+      "cost": "50.990",
       "currency": "USD",
       "image": "https://byd.com.uy/wp-content/uploads/2024/01/seal_dest.jpg",
       "icon": "Car",
@@ -52,7 +52,7 @@
         "Batería Blade ultra segura con tecnología Cell To Body (CBT). Autonomía de hasta 456 km (según WLTC).",
         "Sonido Hi-Fi de 12 altavoces."
       ],
-      "cost": 56990,
+      "cost": "56.990",
       "currency": "USD",
       "image": "https://byd.com.uy/wp-content/uploads/2025/02/SEALION_img_dest.webp",
       "icon": "SUV",
@@ -66,7 +66,7 @@
         "Batería Blade ultra segura con una autonomía de hasta 530 km (según WLTC).",
         "Suspensión inteligente con sistema DiSus-C."
       ],
-      "cost": 80990,
+      "cost": "80.990",
       "currency": "USD",
       "image": "https://byd.com.uy/wp-content/uploads/2024/05/dest_newtang_grey.jpg",
       "icon": "SUV",

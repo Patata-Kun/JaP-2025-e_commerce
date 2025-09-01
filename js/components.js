@@ -76,6 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
     loadComponent('navbar', 'navbar').then(() => {
       // configura la navegación activa después de cargar navbar
       setupActiveNavigation();
+      // inicializa el menú hamburger
+      initMobileMenu();
     });
   }
   
@@ -84,3 +86,43 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// responsive design
+function initMobileMenu() {
+  const navbarToggle = document.getElementById('navbar-toggle');
+  const navbarLinks = document.getElementById('navbar-links');
+  
+  if (navbarToggle && navbarLinks) {
+    navbarToggle.addEventListener('click', function() {
+      // toggle las clases activas
+      navbarToggle.classList.toggle('active');
+      navbarLinks.classList.toggle('active');
+    });
+
+    // cerrar menú al hacer click en un enlace
+    const links = navbarLinks.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navbarToggle.classList.remove('active');
+        navbarLinks.classList.remove('active');
+      });
+    });
+
+    // cerrar menú al hacer click fuera de él
+    document.addEventListener('click', function(event) {
+      const isClickInsideNav = navbarToggle.contains(event.target) || navbarLinks.contains(event.target);
+      
+      if (!isClickInsideNav && navbarLinks.classList.contains('active')) {
+        navbarToggle.classList.remove('active');
+        navbarLinks.classList.remove('active');
+      }
+    });
+
+    // cerrar menú al cambiar el tamaño de ventana
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        navbarToggle.classList.remove('active');
+        navbarLinks.classList.remove('active');
+      }
+    });
+  }
+}
