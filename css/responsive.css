@@ -1,3 +1,24 @@
+/* elementos de la navbar que la hacen responsive */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-right: clamp(0.5rem, 8vw, 16rem);
+  position: absolute;
+  right: 1rem;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-palladian);
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
 /* <- responsive design -> */
 @media (max-width: 1366px) {
   .title {
@@ -58,7 +79,7 @@
 
 .icon-car-type {
   width: 20px;
-  transform: translateY(5px);
+  height: 20px;
 }
 
   .product-price-sold h4, .product-price p {
@@ -114,22 +135,26 @@
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-  }
 
-  .navbar-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
+    & li {
+      width: 100%;
+    }
 
-  .navbar-links li {
-    width: 100%;
-  }
+    & li:last-child {
+      padding-bottom: 1rem;
+    }
 
-  .navbar-links a {
+    & a {
     display: block;
     width: 100%;
     text-align: center;
     padding: 0.5rem;
+    }
+
+    &.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }

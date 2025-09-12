@@ -2,10 +2,10 @@
 .categories-container {
   background-color: none;
   border: 2px solid var(--color-oatmeal);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -13,6 +13,8 @@
   margin: 0 auto;
   padding: 1rem;
   gap: 2rem 1rem; /* row-gap column-gap */
+
+  max-width: 120rem;
 }
 
 /* contenedor de cada producto dentro de las categorías, incluye la imagen y la descripción */
@@ -21,28 +23,41 @@
   width: 100%;
   max-height: fit-content;
   gap: 1rem;
+  align-items: stretch; /* Hace que los elementos hijos tengan la misma altura */
 }
 
 .product-image {
   box-shadow: 0 4px 5px -2px oklch(0 0 0 / 0.25);
-  border-radius: 0.75rem;
-  max-width: clamp(5rem, 21vw, 21rem);
+  border-radius: 1rem;
+  max-width: 24rem;
   object-fit: cover;
   aspect-ratio: 16 / 9;
+  height: 100%; /* Hace que la imagen ocupe toda la altura disponible */
 }
 
-/* contenedor de la descripción de cada producto, incluye el nombre del producto y descripción, precio y la cantidad de vendidos */
+/* contenedor de la descripción de cada producto, incluye el nombre del producto e icono, descripción, precio y la cantidad de vendidos */
 .product-description {
   background-color: var(--color-grey85);
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   width: 100%;
-  padding: 1rem;
-  max-height: fit-content;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .icon-car-type {
-  transform: translateY(3px);
-  margin-right: 0.25rem;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.product-name {
+  margin: 0;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* contenedor del precio de cada producto, incluye su precio y la cantidad de vendidos */
@@ -50,21 +65,27 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* align-items: baseline; */
-  margin: 0;
-}
+  align-items: flex-end;
+  margin-top: auto;
 
-.product-description h2 {
-  margin: 0;
-}
+  & h4 {
+    font: 400 0.75rem/1.5rem "Inter", sans-serif;
+    color: var(--color-grey50);
+    margin: 0;
+    line-height: 1rem;
+  }
 
-.product-price-sold h4, .product-price-sold p {
-  font: 400 1rem/1.5rem "Inter", sans-serif;
-  color: var(--color-grey50);
-  margin: 0;
-  line-height: 1;
-}
+  & p {
+    font: 400 0.75rem/0rem "Inter", sans-serif;
+    color: var(--color-grey50);
+    margin: 0;
+    padding: 0;
+    line-height: 1.1rem;
+  }
 
-.product-price-sold p {
-  transform: translateY(25px);
+  & h2 {
+    font-weight: 750;
+    margin: 0;
+    line-height: 1.5rem;
+  }
 }

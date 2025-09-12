@@ -1,13 +1,13 @@
 /* sección hero (mensaje de bienvenida) */
-.welcome {
+.welcome-title {
   background-color: var(--color-anchorfishBlue);
   border-radius: 1rem;
+  margin: 6rem auto;
   padding: 2rem;
-  margin-top: 6rem;
-  
+  max-width: 120rem;
+
   display: flex;
   flex-direction: column;
-  align-items: left;
 }
 
 .welcome-text-h1 {
@@ -26,7 +26,8 @@
   margin-top: -2rem;  
 }
 
-.welcome img {
+.welcome-title img {
   width: 10rem;
   align-self: flex-end;
 }
+
