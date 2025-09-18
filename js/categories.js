@@ -1,5 +1,5 @@
 // init de las constantes necesarias para la API
-const categoriesURL = "https://patata-kun.github.io/e-mercado-API/cats/cat.json"
+const categoriesURL = "https://patata-kun.github.io/e-mercado-API/cats/cat_json"
 
 const productsURL = "https://patata-kun.github.io/e-mercado-API/cats_products/"
 const productInfoURL = "https://patata-kun.github.io/e-mercado-API/products/"
@@ -18,34 +18,50 @@ function getCarIconPath(iconType) {
   return iconPaths[iconType] || null;
 }
 
-// fetch de carga del título de la categoría específica
-const categoryId = localStorage.getItem('catID') || null;
+// // fetch de carga del título de la categoría específica
+// const categoryId = localStorage.getItem('catID') || null;
 
 
-fetch(categoriesURL)
-  .then(response => response.json())
-  .then(data => {
-    const categoriesTitle = document.querySelector('.categories-title');
-    if (categoriesTitle) {
-      const selectedCategory = data.find(category => category.id == categoryId);
+// fetch(categoriesURL)
+//   .then(response => response.json())
+//   .then(data => {
+//     const categoriesTitle = document.querySelector('.categories-title');
+//     if (categoriesTitle) {
+//       const selectedCategory = data.find(category => category.id == categoryId);
       
-      if (selectedCategory) {
-        categoriesTitle.innerHTML = `
-          <div class="category-item">
-            <h1>${selectedCategory.name}</h1>
-            <p>${selectedCategory.description}</p>
-          </div>
-        `;
-      } else {
-        console.warn(`Categoría con ID ${categoryId} no encontrada`);
-      }
-    }
-  })
-  .catch(error => console.error('Error al cargar títulos:', error));
+//       if (selectedCategory) {
+//         categoriesTitle.innerHTML = `
+//           <div class="category-item">
+//             <h1>${selectedCategory.name}</h1>
+//             <p>${selectedCategory.description}</p>
+//           </div>
+//         `;
+//       } else {
+//         console.warn(`Categoría con ID ${categoryId} no encontrada`);
+//       }
+//     }
+//   })
+//   .catch(error => console.error('Error al cargar títulos:', error));
   
 
-// fetch de carga de los productos de la categoría específica
-fetch(`../js/productsCars.json`)
+// fetch de carga de las categorías mostradas en categories.html
+fetch (categoriesURL)
+  .then(response => response.json())
+  .then(data => {
+    const categoriesList = document.querySelector('.categories-container');
+  })
+  .catch(error => console.error('Error al cargar las categorías:', error))
+
+
+
+
+
+
+
+
+
+// fetch de carga de los productos de la categoría específica (por ahora es solo de autos [101.json])
+fetch(productsURL + '/101.json')
   .then(response => response.json())
   .then(data => {
     const wrapper = document.getElementById('categories-cars');
@@ -80,4 +96,4 @@ fetch(`../js/productsCars.json`)
       wrapper.appendChild(carDiv);
     });
   })
-  .catch(error => console.error('Error al cargar JSON:', error));
+  .catch(error => console.error('Error al cargar la categoría:', error));
