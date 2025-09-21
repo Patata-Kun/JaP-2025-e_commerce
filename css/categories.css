@@ -32,7 +32,7 @@
   max-width: 24rem;
   object-fit: cover;
   aspect-ratio: 16 / 9;
-  height: 100%; /* Hace que la imagen ocupe toda la altura disponible */
+  height: 100%;
 }
 
 /* contenedor de la descripción de cada producto, incluye el nombre del producto e icono, descripción, precio y la cantidad de vendidos */
@@ -87,5 +87,28 @@
     font-weight: 750;
     margin: 0;
     line-height: 1.5rem;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  align-items: center;
+
+  & button {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    background-color: var(--color-grey85);
+    font: 400 1rem/1rem "Inter", sans-serif;
+    border: none;
+    border-radius: 1rem;
+
+    padding: 0.60rem 0.75rem;
+
+    cursor: pointer;
   }
 }
