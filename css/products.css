@@ -20,17 +20,19 @@
 .product-carousel {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
   margin: 0;
-  padding: 0 20%;
+  padding: 0;
   gap: 3rem;
-  width: 50%;
-  height: 100%;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+
   anchor-name: --carousel;
   scroll-snap-type: x mandatory;
+
+  max-width: calc(24.6rem * 16/9);
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
 
   &::-webkit-scrollbar {
     display: none;
@@ -153,19 +155,18 @@
   align-items: center;
   padding-top: 1.5rem;
 
-    h5 {
+  & .product-stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  & h5 {
     font: 400 0.75rem/1rem "Inter", sans-serif;
     color: var(--color-grey50);
     margin: 0;
   }
-
-}
-
-.product-stars {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.25rem;
 }
 
 span {

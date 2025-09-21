@@ -21,7 +21,7 @@
   <main class="main-content">
     <div class="categories-title">
       <h1> Productos </h1>
-      <p> Verás aquí todos los productos de la categoría...</p>
+      <p> Verás aquí todos los productos de la categoría ...</p>
     </div>
    
     <div class="buttons-container">
@@ -31,12 +31,12 @@
 
     <!--2 LABELS PARA PODER ESCRIBIR LOS VALORES, Y EL BOTÓN FILTRAR PARA QUE FILTRE SEGÚN EL VALOR INGRESADO-->
     <div class="filter-container">
-      <label for="min-price">Precio mínimo:</label>  
-      <input type="number" id="min-price" placeholder="USD 0">
+      <label for="min-price">Precio mínimo (USD):</label>  
+      <input type="number" id="min-price" placeholder="0">
 
 
-      <label for="max-price">Precio máximo:</label>
-      <input type="number" id="max-price" placeholder="USD 100.000">
+      <label for="max-price">Precio máximo (USD):</label>
+      <input type="number" id="max-price" placeholder="100000">
 
 
       <button id="filter-button">Filtrar</button>
@@ -49,10 +49,13 @@
       </select>
     </div>
 
+
     <div id="categories-cars" class="categories-container"></div> <!-- SELECT PARA ORDENAR LOS PRODUCTOS SEGÚN EL CRITERIO SELECCIONADO-->
   </main>
 
+
   <div id="footer"></div>
+
 
   <script src="../js/components.js"></script>
   <script src="../js/categories.js"></script>
