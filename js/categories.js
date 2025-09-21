@@ -13,12 +13,6 @@ const cartBuyURL = "https://patata-kun.github.io/e-mercado-API/cart/buy.json"
 const ORDER_ASC_BY_NAME = "AZ";
 const ORDER_DESC_BY_NAME = "ZA";
 const ORDER_BY_PROD_COUNT = "Cant.";
-
-// NUEVAS CONSTANTES PARA ORDENAMIENTO DE PRODUCTOS
-const ORDER_ASC_BY_PRICE = "PRICE_ASC";
-const ORDER_DESC_BY_PRICE = "PRICE_DESC";
-const ORDER_DESC_BY_RELEVANCE = "RELEVANCE_DESC";
-
 let currentCategoriesArray = [];
 let currentSortCriteria = undefined;
 let minCount = undefined;
@@ -175,3 +169,103 @@ function getCarIconPath(iconType) {
   };
   return iconPaths[iconType] || null;
 }
+
+const filterButton = document.getElementById('filter-button'); //BUSCA EN HTML EL ELEMENTO SEGUN LA ID "filter-button", QUE ES EL BOTÓN FILTRAR//
+const minPriceInput = document.getElementById('min-price'); //BUSCA EN HTML EL INPUT SEGUN LA ID "min-price"//
+const maxPriceInput = document.getElementById('max-price'); //BUSCA EN HTML EL INPUT SEGUN LA ID "max-price"//
+let currentProductsArray = [];
+
+
+function renderProducts(productsList) {
+  const wrapper = document.getElementById('categories-cars');
+  wrapper.innerHTML = "";
+
+
+  if (productsList.length === 0) {
+    wrapper.innerHTML = "<p>No hay productos en este rango de precio.</p>";
+    return;
+  }
+
+
+  productsList.forEach(auto => {
+    const carDiv = document.createElement('div');
+    carDiv.classList.add('categories-product');
+
+
+    carDiv.innerHTML = `
+      <div class="categories-product">
+        <img class="product-image" src=${auto.image} alt="${auto.name}">
+        <div class="product-description">
+          <h2 class="product-name">
+            ${auto['icon-car-type'] && getCarIconPath(auto['icon-car-type']) ?
+              `<svg class="icon-car-type" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#7F7F7F" viewBox="0 0 256 256">
+                <path d="${getCarIconPath(auto['icon-car-type'])}"></path>
+              </svg>` : ''}
+            ${auto.name}
+          </h2>
+          <p>${auto.description.map(desc => `-> ${desc}`).join('<br>')}</p>
+          <div class="product-price-sold">
+            <div class="product-price">
+              <h4> Desde: </h4>
+              <h2> USD ${auto.cost.toLocaleString('es-UY')} </h2>
+            </div>
+            <p>${auto.soldCount} vendidos</p>
+          </div>
+        </div>
+      </div>
+    `;
+    wrapper.appendChild(carDiv);
+  });
+}
+
+
+fetch(productsURL + '/101.json') // TRAE LOS PRODUCTOS DESDE EL JSON
+  .then(response => response.json()) // CONVIERTE LA RESPUESTA A JSON
+  .then(data => {
+    currentProductsArray = data.products; // GUARDA LOS PRODUCTOS EN EL ARREGLO GLOBAL
+    renderProducts(currentProductsArray); // MUESTRA LOS PRODUCTOS EN PANTALLA
+  })
+  .catch(error => console.error('Error loading category:', error)); // MUESTRA ERROR SI FALLA
+
+
+
+
+filterButton.addEventListener('click', () => { // EVENTO AL HACER CLIC EN EL BOTON FILTRAR
+  const minPrice = parseFloat(minPriceInput.value) || 0; // OBTIENE EL PRECIO MINIMO (O 0 SI ESTA VACIO)
+  const maxPrice = parseFloat(maxPriceInput.value) || Infinity; // OBTIENE EL PRECIO MAXIMO (O INFINITO SI ESTA VACIO)
+
+
+  const filtered = currentProductsArray.filter(p => p.cost >= minPrice && p.cost <= maxPrice); // FILTRA PRODUCTOS SEGUN RANGO
+  renderProducts(filtered); // MUESTRA SOLO LOS PRODUCTOS FILTRADOS
+});
+
+
+
+
+//--- ORDENAS PRODUCTOS SEGÚN PRECIO, Y CANTIDAD DE VENDIDOS---//
+
+
+const sortOptions = document.getElementById("sort-options"); // OBTIENE EL SELECT DEL ORDENAMIENTO
+
+
+function sortProducts(criteria, array) { // FUNCION PARA ORDENAR PRODUCTOS
+  let result = [...array]; // CREA UNA COPIA DEL ARREGLO
+
+
+  if (criteria === "asc-price") { // ORDENAR POR PRECIO ASCENDENTE
+    result.sort((a, b) => a.cost - b.cost);
+  } else if (criteria === "desc-price") { // ORDENAR POR PRECIO DESCENDENTE
+    result.sort((a, b) => b.cost - a.cost);
+  } else if (criteria === "desc-sold") { // ORDENAR POR CANTIDAD DE VENTAS DEL MAS VENDIDO AL MENOS VENDIDO
+    result.sort((a, b) => b.soldCount - a.soldCount);
+  }
+
+
+  return result; // DEVUELVE EL ARREGLO ORDENADO
+}
+
+
+sortOptions.addEventListener("change", () => { // EVENTO AL CAMBIAR EL SELECT DE ORDEN
+  const sorted = sortProducts(sortOptions.value, currentProductsArray); // ORDENA SEGUN EL CRITERIO SELECCIONADO
+  renderProducts(sorted); // MUESTRA LOS PRODUCTOS ORDENADOS
+});

@@ -23,7 +23,8 @@
   width: 100%;
   max-height: fit-content;
   gap: 1rem;
-  align-items: stretch; /* Hace que los elementos hijos tengan la misma altura */
+  align-items: stretch;
+  cursor: pointer;
 }
 
 .product-image {

@@ -1,45 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos - eCommerce</title>
+  <title>Autos - eCommerce</title>
+
 
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/categories.css">
   <link rel="stylesheet" href="../css/responsive.css">
-  
+ 
   <link rel="icon" href="../img/px/favicon.ico" sizes="32x32">
   <link rel="icon" href="../img/svg/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../img/px/apple-touch-icon.png"> 
-
+  <link rel="apple-touch-icon" href="../img/px/apple-touch-icon.png">
 </head>
 <body>
   <div id="navbar"></div>
 
+
   <main class="main-content">
-  <div class="categories-title">
-    <!-- Actualizarlo según la categoría con category-id -->
-    <h1> Categorías </h1>
-    <p> Verás aquí todas las categorías del sitio</p>
-  </div>
+    <div class="categories-title"></div>
+   
+    <!--2 LABELS PARA PODER ESCRIBIR LOS VALORES, Y EL BOTÓN FILTRAR PARA QUE FILTRE SEGÚN EL VALOR INGRESADO-->
+    <div class="filter-container">
+      <label for="min-price">Precio mínimo (USD):</label>  
+      <input type="number" id="min-price" placeholder="0">
 
-  <div class="buttons-container"> 
-    <button> Ordenar por <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--color-grey10)" viewBox="0 0 256 256"><path d="M205.66,181.66l-48,48a8,8,0,0,1-11.32,0l-48-48A8,8,0,0,1,104,168h40V128A88.1,88.1,0,0,0,56,40a8,8,0,0,1,0-16A104.11,104.11,0,0,1,160,128v40h40a8,8,0,0,1,5.66,13.66Z"></path></svg></button>
-    <button> Filtrar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--color-grey10)" viewBox="0 0 256 256"><path d="M205.66,181.66l-48,48a8,8,0,0,1-11.32,0l-48-48A8,8,0,0,1,104,168h40V128A88.1,88.1,0,0,0,56,40a8,8,0,0,1,0-16A104.11,104.11,0,0,1,160,128v40h40a8,8,0,0,1,5.66,13.66Z"></path></svg></button>
-  </div>
 
-    <div id="categories-cars" class="categories-container">
+      <label for="max-price">Precio máximo (USD):</label>
+      <input type="number" id="max-price" placeholder="100000">
 
+
+      <button id="filter-button">Filtrar</button>
+
+      <label for="sort-options">Ordenar por:</label>
+      <select id="sort-options">
+        <option value="asc-price">Precio: menor a mayor</option> <!-- DE MENOR A MAYOR -->
+        <option value="desc-price">Precio: mayor a menor</option> <!-- DE MAYOR A MENOR -->
+        <option value="desc-sold">Más relevantes (más vendidos)</option>
+      </select>
     </div>
+
+
+    <div id="categories-cars" class="categories-container"></div> <!-- SELECT PARA ORDENAR LOS PRODUCTOS SEGÚN EL CRITERIO SELECCIONADO-->
   </main>
 
 
-
   <div id="footer"></div>
+
 
   <script src="../js/components.js"></script>
   <script src="../js/categories.js"></script>
 </body>
 </html>
-
