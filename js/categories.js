@@ -107,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function(e) {
       showCategories();
     }
 });
-
 });
 
 function sortAndShowCategories(sortCriteria, categoriesArray){
@@ -121,7 +120,6 @@ function sortAndShowCategories(sortCriteria, categoriesArray){
 
     showCategories();
 }
-
 
 // fetch de carga de los productos de la categoría específica (por ahora es solo de autos [101.json])
 fetch(productsURL + '/101.json')
@@ -175,25 +173,20 @@ const minPriceInput = document.getElementById('min-price'); //BUSCA EN HTML EL I
 const maxPriceInput = document.getElementById('max-price'); //BUSCA EN HTML EL INPUT SEGUN LA ID "max-price"//
 let currentProductsArray = [];
 
-
 function renderProducts(productsList) {
   const wrapper = document.getElementById('categories-cars');
   wrapper.innerHTML = "";
-
 
   if (productsList.length === 0) {
     wrapper.innerHTML = "<p>No hay productos en este rango de precio.</p>";
     return;
   }
 
-
   productsList.forEach(auto => {
     const carDiv = document.createElement('div');
     carDiv.classList.add('categories-product');
 
-
     carDiv.innerHTML = `
-      <div class="categories-product">
         <img class="product-image" src=${auto.image} alt="${auto.name}">
         <div class="product-description">
           <h2 class="product-name">
@@ -212,12 +205,10 @@ function renderProducts(productsList) {
             <p>${auto.soldCount} vendidos</p>
           </div>
         </div>
-      </div>
     `;
     wrapper.appendChild(carDiv);
   });
 }
-
 
 fetch(productsURL + '/101.json') // TRAE LOS PRODUCTOS DESDE EL JSON
   .then(response => response.json()) // CONVIERTE LA RESPUESTA A JSON
@@ -227,30 +218,20 @@ fetch(productsURL + '/101.json') // TRAE LOS PRODUCTOS DESDE EL JSON
   })
   .catch(error => console.error('Error loading category:', error)); // MUESTRA ERROR SI FALLA
 
-
-
-
 filterButton.addEventListener('click', () => { // EVENTO AL HACER CLIC EN EL BOTON FILTRAR
   const minPrice = parseFloat(minPriceInput.value) || 0; // OBTIENE EL PRECIO MINIMO (O 0 SI ESTA VACIO)
   const maxPrice = parseFloat(maxPriceInput.value) || Infinity; // OBTIENE EL PRECIO MAXIMO (O INFINITO SI ESTA VACIO)
-
 
   const filtered = currentProductsArray.filter(p => p.cost >= minPrice && p.cost <= maxPrice); // FILTRA PRODUCTOS SEGUN RANGO
   renderProducts(filtered); // MUESTRA SOLO LOS PRODUCTOS FILTRADOS
 });
 
-
-
-
 //--- ORDENAS PRODUCTOS SEGÚN PRECIO, Y CANTIDAD DE VENDIDOS---//
-
 
 const sortOptions = document.getElementById("sort-options"); // OBTIENE EL SELECT DEL ORDENAMIENTO
 
-
 function sortProducts(criteria, array) { // FUNCION PARA ORDENAR PRODUCTOS
   let result = [...array]; // CREA UNA COPIA DEL ARREGLO
-
 
   if (criteria === "asc-price") { // ORDENAR POR PRECIO ASCENDENTE
     result.sort((a, b) => a.cost - b.cost);
@@ -259,11 +240,8 @@ function sortProducts(criteria, array) { // FUNCION PARA ORDENAR PRODUCTOS
   } else if (criteria === "desc-sold") { // ORDENAR POR CANTIDAD DE VENTAS DEL MAS VENDIDO AL MENOS VENDIDO
     result.sort((a, b) => b.soldCount - a.soldCount);
   }
-
-
   return result; // DEVUELVE EL ARREGLO ORDENADO
 }
-
 
 sortOptions.addEventListener("change", () => { // EVENTO AL CAMBIAR EL SELECT DE ORDEN
   const sorted = sortProducts(sortOptions.value, currentProductsArray); // ORDENA SEGUN EL CRITERIO SELECCIONADO
