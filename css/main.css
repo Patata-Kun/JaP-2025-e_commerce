@@ -81,6 +81,19 @@ p {
   cursor: pointer;
 }
 
+.button-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  font: 400 1rem/1rem "Inter", sans-serif;
+  background-color: var(--color-grey85);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.60rem 0.75rem;
+  cursor: pointer;
+}
+
 .container-link, .container-text {
   color: var(--color-palladian);
   font-weight: 700;
