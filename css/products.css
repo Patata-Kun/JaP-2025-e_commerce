@@ -168,4 +168,51 @@ span {
     align-items: center;
     gap: 1rem;
   }
+  
 }
+/* ESTILOS DE LAS CALIFICACIONES AL CELU FLIP*/
+.product-reviews {
+  width: 100%;
+  margin-top: 2rem;
+  background-color: var(--color-grey90);
+  border-radius: 1rem;
+}
+
+.review-card {
+  background-color: var(--color-grey85);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.review-card:last-child {
+  margin-bottom: 0;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.30rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-author {
+  font-weight: 600;
+}
+
+.review-date {
+  color: var(--color-grey50);
+  font-size: 0.875rem;
+}
+
+.review-stars {
+  color: var(--color-burningFlame);
+  font-size: 1rem;
+  margin-left: auto;
+}
+
+.review-text {
+  margin: 0;
+  line-height: 1.5;
+}
+
