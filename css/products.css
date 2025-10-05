@@ -1,0 +1,218 @@
+/* contenedor de un producto - contiene la información de un producto (.product-info) */
+.products-container {
+  display: flex;
+  flex-flow: row wrap;
+
+  gap: 1rem;
+  margin: 0 auto;
+  padding-top: 6rem;
+}
+
+/* información de un producto - contiene las imágenes del mismo (.product-carousel) y su información (.product-content) */
+.product-info {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  height: fit-content;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* carrusel de imágenes de un producto */
+.product-carousel {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  gap: 3rem;
+
+  anchor-name: --carousel;
+  scroll-snap-type: x mandatory;
+
+  max-width: calc(24.6rem * 16/9);
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::scroll-button(right), &::scroll-button(left) {
+    content: '->';
+    border: none;
+    background-color: hsla(0, 0%, 10%, 0.2);
+    font: 800 1rem/1rem "Inter", sans-serif;
+    border: 2px solid var(--color-grey95);
+    color: var(--color-grey95);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: right center;
+    translate: -250%;
+  }
+
+  &::scroll-button(left) {
+    content: '<-';
+    position-area: left center;
+    translate: 250%;
+  }
+
+  &::scroll-button(right):disabled, &::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+}
+
+.carousel-image {
+  scroll-snap-align: center;
+  max-height: 24.6rem;
+  width: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
+  object-fit: cover;
+  flex-shrink: 0;
+  scroll-snap-stop: always;
+}
+
+/* información de un producto - contiene la descripción del mismo (.product-description) */
+.product-content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image {
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  height: 100%;
+}
+
+/* descripción de un producto - contiene el nombre del producto (.product-description-title), la categoría a la que pertenece y la información del producto */
+.product-description {
+  background-color: var(--color-grey85);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+  
+  & .product-description-title h2 {
+    padding: 0;
+    margin: 0;
+  }
+
+  & .product-description-title h4 {
+    font: 400 0.75rem/1.5rem "Inter", sans-serif;
+    color: var(--color-grey50);
+    margin: 0;
+    line-height: 1rem;
+  }
+
+  & .product-description-text {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* contenedor de los botones de acción de un producto */
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* calificación de un producto - incluye las estrellas, el número de calificaciones y el total de vendidos */
+.product-stars-sells {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  & .product-stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  & h5 {
+    font: 400 0.75rem/1rem "Inter", sans-serif;
+    color: var(--color-grey50);
+    margin: 0;
+  }
+}
+
+span {
+  font-weight: bold;
+}
+
+.product-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .product-add-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+}
+/* ESTILOS DE LAS CALIFICACIONES AL CELU FLIP*/
+.product-reviews {
+  width: 100%;
+  margin-top: 2rem;
+  background-color: var(--color-grey90);
+  border-radius: 1rem;
+}
+
+.review-card {
+  background-color: var(--color-grey85);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.review-card:last-child {
+  margin-bottom: 0;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.30rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-author {
+  font-weight: 600;
+}
+
+.review-date {
+  color: var(--color-grey50);
+  font-size: 0.875rem;
+}
+
+.review-stars {
+  color: var(--color-burningFlame);
+  font-size: 1rem;
+  margin-left: auto;
+}
+
+.review-text {
+  margin: 0;
+  line-height: 1.5;
+}
+

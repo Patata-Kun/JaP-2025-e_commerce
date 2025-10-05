@@ -1,0 +1,133 @@
+.categories-title{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  /* margin-top: clamp(1rem, 10vw, 6rem);
+  margin-bottom: clamp(1rem, 10vw, 6rem); */
+
+  & h1 {
+  margin: 0 }
+  & p {
+    margin: 0;
+  }
+}
+
+/* contenedor principal de los items de las categorías; representa el borde de 2px alrededor de los productos */
+.categories-container {
+  background-color: none;
+  border: 2px solid var(--color-oatmeal);
+  border-radius: 1.5rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 2rem 1rem; /* row-gap column-gap */
+
+  max-width: 120rem;
+}
+
+/* contenedor de cada producto dentro de las categorías, incluye la imagen y la descripción */
+.categories-product {
+  display: flex;
+  width: 100%;
+  max-height: fit-content;
+  gap: 1rem;
+  align-items: stretch;
+  cursor: pointer;
+}
+
+.product-image {
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  max-width: 24rem;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  height: 100%;
+}
+
+/* contenedor de la descripción de cada producto, incluye el nombre del producto e icono, descripción, precio y la cantidad de vendidos */
+.product-description {
+  background-color: var(--color-grey85);
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-car-type {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.product-name {
+  margin: 0;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* contenedor del precio de cada producto, incluye su precio y la cantidad de vendidos */
+.product-price-sold {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+
+  & h4 {
+    font: 400 0.75rem/1.5rem "Inter", sans-serif;
+    color: var(--color-grey50);
+    margin: 0;
+    line-height: 1rem;
+  }
+
+  & p {
+    font: 400 0.75rem/0rem "Inter", sans-serif;
+    color: var(--color-grey50);
+    margin: 0;
+    padding: 0;
+    line-height: 1.1rem;
+  }
+
+  & h2 {
+    font-weight: 750;
+    margin: 0;
+    line-height: 1.5rem;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+
+  & button, select, input {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    background-color: var(--color-grey85);
+    font: 400 1rem/1rem "Inter", sans-serif;
+    border: none;
+    border-radius: 1rem;
+
+    padding: 0.60rem 0.75rem;
+
+    cursor: pointer;
+  }
+}

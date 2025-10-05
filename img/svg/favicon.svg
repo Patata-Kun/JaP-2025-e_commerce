@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 820">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f09100;
+        font-family: InterDisplay-Light, 'Inter Display';
+        font-size: 1296px;
+        font-weight: 300;
+        stroke: #000;
+        stroke-dasharray: 41 36.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 15px;
+      }
+
+      .cls-2 {
+        opacity: .99;
+      }
+	@media (prefers-color-scheme: dark) {
+		.cls-1 {stroke: #fff}
+	}
+    </style>
+  </defs>
+  <g class="cls-2">
+    <text class="cls-1" transform="translate(67.97 754.79)"><tspan x="0" y="0">e</tspan></text>
+  </g>
+</svg>
