@@ -7,14 +7,13 @@
   --color-blueFantastic: oklch(0.3471 0.0373 253.36); /* #2c3b4d */
   --color-truffelTrouble: oklch(0.5309 0.1148 37.14);  /* #a35139 */
   --color-anchorfishBlue: oklch(0.264 0.0274 251.05); /* #1b2632 */
-  --color-bg: var(--color-grey95); 
   --color-jap: oklch(0.7396 0.1656 65.25); /* #f09100 */
   --color-grey95: oklch(96.115% 0.00011 271.152); /* #f2f2f2 - 95% grey */
-  --color-grey85: #d9d9d9;
-  --color-grey50: #7f7f7f;
-  --color-grey20: #333333;
-  --color-grey10: #1a1a1a;
-  --box-shadow: 0 4px 12px 0px oklch(0 0 0 / 0.25);
+  --color-grey85: oklch(0.8853 0 0); /* #d9d9d9 - 85% grey */
+  --color-grey50: oklch(0.5965 0 0); /* #7f7f7f - 50% grey */
+  --color-grey20: oklch(0.3211 0 0); /* #333333 - 20% grey */
+  --color-grey10: oklch(0.2178 0 0); /* #1a1a1a - 10% grey */
+  --box-shadow: 0 4px 5px -2px oklch(0 0 0 / 0.10);
   scroll-behavior: smooth;
 }
 
@@ -25,7 +24,7 @@
 
 body {
   background-color: var(--color-palladian);
-  font: 400 16px/1.6 "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   color: var(--color-grey10);
 }
@@ -53,6 +52,7 @@ h1 {
 
 h2 {
   font: 700 1.5rem/2rem "Inter", sans-serif;
+  
 }
 
 h3 {
@@ -63,40 +63,61 @@ h4 {
   font: 700 1rem/1.5rem "Inter", sans-serif;
 }
 
+h5 {
+  font: 400 0.75rem/1rem "Inter", sans-serif;
+  color: var(--color-grey50);
+  margin: 0;
+}
+
 p {
   line-height: 1.5rem;
 }
 
 .button-primary {
-  font: 700 1.25rem/1.5rem "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-height: 3rem;
+
+  font: 700 1.25rem/1rem "Inter", sans-serif;
   background-color: var(--color-grey95);
-  box-shadow: 0 4px 5px -2px oklch(0 0 0 / 0.25);
   border: none;
   border-radius: 1rem;
-
-  max-width: fit-content;
   padding: 1rem;
+  justify-content: center;
   align-self: center;
 
   cursor: pointer;
+  
+  &:hover {
+    box-shadow: var(--box-shadow);
+  }
 }
 
 .button-secondary {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  max-height: 2rem;
 
   font: 400 1rem/1rem "Inter", sans-serif;
   background-color: var(--color-grey85);
   border: none;
   border-radius: 1rem;
-  padding: 0.60rem 0.75rem;
+
+  padding: 0.50rem 0.75rem;
+
   cursor: pointer;
+
+  &:hover {
+    box-shadow: var(--box-shadow);
+  }
 }
+
 
 .container-link, .container-text {
   color: var(--color-palladian);
-  font-weight: 700;
+  font: 700 16px/1.5 "Inter", sans-serif;
   text-align: center;
 }
 

@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/products.css">
   <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
   
   <link rel="icon" href="../img/px/favicon.ico" sizes="32x32">
   <link rel="icon" href="../img/svg/favicon.svg" type="image/svg+xml">
@@ -35,14 +37,16 @@
         <div class="product-description">
           <div class="product-description-title">
           <h2> Samsung Galaxy ZFlip7 </h2>
-          <h4> Tecnología </h4>
+          <h5> Tecnología </h5>
         </div>
           <div class="product-description-text">
+            <p>
             <span>Pantalla</span> -> Principal de 6,9” Dynamic AMOLED 2x, 1 a 120 Hz. De cubierta de 4,1” Super AMOLED, 60 a 120 Hz. <br>
-            <span>Cámaras</span> -> Wide de 50 MP F1.8, Ultrawide de 12 MP F2.2 y frontal de 10MP F2.2. <br>
+            <span>Cámaras</span> -> Wide de 50 MP F1.8, Ultrawide de 12 MP F2.2 y frontal de 10 MP F2.2. <br>
             <span>Procesador</span> -> Qualcomm Snapdragon® 8 Elite para Galaxy. <br>
             <span>Memoria</span> -> 12 GB. <br>
-            <span>Almacenamiento</span> -> 256 GB. 
+            <span>Almacenamiento</span> -> 256 GB.
+            </p> 
         </div>
 
         <div class="product-stars-sells">
@@ -60,7 +64,7 @@
             <svg width="20" height="20" fill="#ffb162"><use href="#star" /></svg>
             <svg width="20" height="20" fill="#ffb162"><use href="#star" /></svg>
             <svg width="20" height="20" fill="#ffb162"><use href="#star-half" /></svg>
-            <h5> 15 calificaciones </h5>  
+            <h5> (15) </h5>  
           </div>
           <div class="product-sells">
             <h5> 8 vendidos </h5>
@@ -74,20 +78,21 @@
             </div>
 
           <div class="product-add-cart">
-            <h5> Total: </h5>
+            <h5>Total</h5>
             <h2>USD 1.149</h2>
             <button class="button-secondary"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#1a1a1a" viewBox="0 0 256 256"><path d="M200 204a12 12 0 00-12-12 12 12 0 1012 12Zm-96 0A12 12 0 0092 192a12 12 0 1012 12ZM230.14 58.87a8 8 0 011.76 6.56l-12.16 66.86A24 24 0 01196.13 152h-116l3.17 17.43A8 8 0 0091.17 176H188a28 28 0 11-28 28 27.75 27.75 0 012.71-12H117.29a28 28 0 11-44.4-8.44 24 24 0 01-5.33-11.27L42 32H24a8 8 0 010-16H48.73a8 8 0 017.87 6.57L62.68 56H224a8 8 0 016.14 2.87Z"></path></svg> </button>
           </div>
       </div>
     </div>
-    </div>
-        <!-- SECCION COMENTARIOS -->
-      <div class="product-reviews">
-        <h3>Comentarios</h3>
+  </div>
 
-         <div class="review-card">
-          <div class="review-header">
-           <span class="review-author">Juan_pedro</span>
+    <!-- SECCION COMENTARIOS -->
+    <div class="product-reviews">
+      <h3>Opiniones</h3>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-author">Juan_pedro</span>
           <span class="review-date">— 25/02/2020 18:03:52</span>
           <div class="review-stars">★★★★★</div>
         </div>
@@ -112,17 +117,29 @@
         <p class="review-text">Amo el dramatismo de poder cortas mis llamadas cerrando el celular y revivir el 2007</p>
       </div>
     </div>
-
   </div>
 
-</main>
+  <div class="product-add-review">
+    <h3> Publicar opinión </h3>
+    
+    <div class="review-contents">
 
-  <!-- <div id="footer"></div> -->
+      <div class="review-text-field">
+        <textarea name="review-text" id="review-text" placeholder="Escribe tu opinión sobre este producto..." required></textarea>
+      </div>
 
-  <script src="../js/components.js"></script>
-  <script src="../js/categories.js"></script>
-</body>
-</html>
+      <div class="review-controls">
+        <button class="button-primary">
+          <i class="ph ph-star" style="color: var(--color-burningFlame)"></i>
+          <i class="ph ph-star" style="color: var(--color-burningFlame)"></i>
+          <i class="ph ph-star" style="color: var(--color-burningFlame)"></i>
+          <i class="ph ph-star" style="color: var(--color-burningFlame)"></i>
+          <i class="ph ph-star" style="color: var(--color-burningFlame)"></i>
+        </button>
+
+        <button class="button-primary"> Publicar </button>
+      </div>
+    </div>
 
   </div>
 
