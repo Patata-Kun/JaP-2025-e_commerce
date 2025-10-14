@@ -162,7 +162,7 @@ span {
   }
 }
 
-/* ESTILOS DE LAS CALIFICACIONES*/
+/* ESTILOS DE LAS CALIFICACIONES CELU FLIP*/
 .product-reviews {
   width: 100%;
   margin-top: 2rem;
@@ -259,4 +259,100 @@ span {
 
 .review-controls button {
   width: 100%;
+}
+/* SECCION PRODUCTOS RELACIONADOS */
+.product-reviews {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+/* FONDO DE LAS FOTOS DE LOS P.R, Y EL BORDE*/
+.product-related-container {
+  background-color: transparent;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  border: 2px solid #d4c5b9;
+}
+/* PONE LOS P.R EN COLUMNAS*/
+.related-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  flex: 1;
+}
+/* IMAGEN Y TEXTO DE CADA P.R, */
+.related-product-item {
+  cursor: pointer; /* CAMBIA LA FORMA DEL MOUSE POR UNA MANITO */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem; /* ESPACVIO ENTRE EL P.R Y SU DESCRIPCION*/
+}
+/* CAJA QWUE CONTIENE AL P.R*/
+.related-product-image-wrapper {
+  background-color: var(--color-grey90);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+/* ANIMACION PARA LA CAJA DE P.R*/
+.related-product-item:hover .related-product-image-wrapper {
+  transform: translateY(-0.25rem);
+  box-shadow: var(--box-shadow);
+}
+/* ESTILO DE LA IMAGEN DENTRO DE LA CAJA*/
+.related-product-item img {
+  width: 100%;
+  max-width: 50rem;
+  height: 15rem;
+  object-fit: contain;
+  border-radius: 1,5rem;
+}
+/* NOMBRE DEL PRODUCTO*/
+.related-product-name {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 0 0 0.5rem 0;
+  height: 2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* PRECIO DE LOS P.R*/
+.related-product-price {
+  font-size: 1,5rem;
+  font-weight: 700;
+  margin: 0;
+}
+/* BOTONES DE NAVEGACION, FLECHITAS*/
+.related-nav-btn {
+  flex-shrink: 0;
+  background-color: hsla(0, 0%, 10%, 0.2);
+  border: 2px solid var(--color-grey95);
+  color: var(--color-grey95);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding-bottom: 0.1em;
+  cursor: pointer;
+  font: 800 1rem/1rem "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+/* LAS FLECHAS SE POENNE MAS OSCURAS*/
+.related-nav-btn:hover {
+  background-color: hsla(0, 0%, 10%, 0.3);
 }

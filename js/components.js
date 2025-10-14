@@ -126,3 +126,45 @@ function initMobileMenu() {
     });
   }
 }
+// PRODUCTOS RELACIONADOS
+document.addEventListener('DOMContentLoaded', function() {
+  const relatedPrev = document.getElementById('relatedPrev');
+  const relatedNext = document.getElementById('relatedNext');
+  const relatedItems = document.querySelectorAll('.related-product-item');
+
+  // CLICK EN PRODUCTOS RELACIONADOS
+  relatedItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const productId = this.getAttribute('data-product-id');
+      window.location.href = `product-info.html?id=${productId}`;
+    });
+  });
+
+  // PARA QUE LAS FLECHITAS DE LOS P.R FUNCIONEN, SI HAY MÁS DE 3 PRODUCTOS.
+  if (relatedPrev && relatedNext) {
+    relatedPrev.addEventListener('click', () => {
+      document.querySelector('.related-products-grid').scrollBy({
+        left: -300,
+        behavior: 'smooth'
+      });
+    });
+
+    relatedNext.addEventListener('click', () => {
+      document.querySelector('.related-products-grid').scrollBy({
+        left: 300,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
+// PRODUCTOS RELACIONADOS - AL HACER CLICK TE REDIRECCIONA.
+document.addEventListener('DOMContentLoaded', function() {
+  const relatedItems = document.querySelectorAll('.related-product-item');
+  
+  relatedItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const productId = this.getAttribute('data-product-id');
+      window.location.href = `product-info.html?id=${productId}`;
+    });
+  });
+});
