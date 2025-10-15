@@ -43,7 +43,7 @@
   &::scroll-button(right), &::scroll-button(left) {
     content: '->';
     border: none;
-    background-color: hsla(0, 0%, 10%, 0.2);
+    background-color: hsla(0, 0%, 10%, 0.30);
     font: 800 1rem/1rem "Inter", sans-serif;
     border: 2px solid var(--color-grey95);
     color: var(--color-grey95);
@@ -66,7 +66,7 @@
   }
 
   &::scroll-button(right):disabled, &::scroll-button(left):disabled {
-    opacity: 0.5;
+    opacity: 0.35;
     cursor: auto;
   }
 
@@ -260,12 +260,14 @@ span {
 .review-controls button {
   width: 100%;
 }
+
 /* SECCION PRODUCTOS RELACIONADOS */
 .product-reviews {
   width: 100%;
   margin-top: 2rem;
   border-radius: 1rem;
 }
+
 /* FONDO DE LAS FOTOS DE LOS P.R, Y EL BORDE*/
 .product-related-container {
   background-color: transparent;
@@ -275,16 +277,18 @@ span {
   align-items: center;
   gap: 1rem;
   position: relative;
-  border: 2px solid #d4c5b9;
+  border: 2px solid var(--color-oatmeal);
 }
+
 /* PONE LOS P.R EN COLUMNAS*/
 .related-products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2rem;
   flex: 1;
 }
-/* IMAGEN Y TEXTO DE CADA P.R, */
+
+/* IMAGEN Y TEXTO DE CADA P.R*/
 .related-product-item {
   cursor: pointer; /* CAMBIA LA FORMA DEL MOUSE POR UNA MANITO */
   display: flex;
@@ -293,6 +297,7 @@ span {
   text-align: center;
   gap: 1rem; /* ESPACVIO ENTRE EL P.R Y SU DESCRIPCION*/
 }
+
 /* CAJA QWUE CONTIENE AL P.R*/
 .related-product-image-wrapper {
   background-color: var(--color-grey90);
@@ -304,20 +309,27 @@ span {
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  gap: 2rem;
 }
+
 /* ANIMACION PARA LA CAJA DE P.R*/
 .related-product-item:hover .related-product-image-wrapper {
   transform: translateY(-0.25rem);
   box-shadow: var(--box-shadow);
 }
+
 /* ESTILO DE LA IMAGEN DENTRO DE LA CAJA*/
 .related-product-item img {
   width: 100%;
   max-width: 50rem;
   height: 15rem;
-  object-fit: contain;
-  border-radius: 1,5rem;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border-radius: 1.5rem;
+  background-color: white;
+  box-shadow: var(--box-shadow);
 }
+
 /* NOMBRE DEL PRODUCTO*/
 .related-product-name {
   font-size: 1rem;
@@ -329,12 +341,14 @@ span {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
 /* PRECIO DE LOS P.R*/
 .related-product-price {
   font-size: 1,5rem;
   font-weight: 700;
   margin: 0;
 }
+
 /* BOTONES DE NAVEGACION, FLECHITAS*/
 .related-nav-btn {
   flex-shrink: 0;

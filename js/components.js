@@ -1,3 +1,14 @@
+// init de las constantes necesarias para la API (llamadas a la API)
+const categoriesURL = "https://patata-kun.github.io/e-mercado-API/cats/cat.json"
+
+const productsURL = "https://patata-kun.github.io/e-mercado-API/cats_products/"
+const productInfoURL = "https://patata-kun.github.io/e-mercado-API/products/"
+const productCommentsURL = "https://patata-kun.github.io/e-mercado-API/products_comments/"
+const publishProductURL  = "https://patata-kun.github.io/e-mercado-API/sell/publish.json"
+
+const cartInfoURL = "https://patata-kun.github.io/e-mercado-API/user_cart/"
+const cartBuyURL = "https://patata-kun.github.io/e-mercado-API/cart/buy.json"
+
 // detecta si estamos en la carpeta raíz o en una subcarpeta
 const isInSubfolder = window.location.pathname.includes('/html/');
 
