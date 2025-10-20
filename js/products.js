@@ -1,6 +1,6 @@
 // función para setear el id del producto seleccionado y redirigir a product-info.html
 function setProductID(id) {
-  localStorage.setItem('id', id);
+  localStorage.setItem('ProdID', id);
   window.location = "product-info.html";
 }
 
@@ -13,12 +13,14 @@ function getCarIconPath(iconType) {
   return iconPaths[iconType] || null;
 }
 
-// fetch 
+// fetch para los productos dentro de una categoría
 fetch(productsURL + '/' + localStorage.getItem('catID') + '.json')
   .then(response => response.json()) // CONVIERTE LA RESPUESTA A JSON
   .then(data => {
     currentProductsArray = data.products; // GUARDA LOS PRODUCTOS EN EL ARREGLO GLOBAL
     renderProducts(currentProductsArray); // MUESTRA LOS PRODUCTOS EN PANTALLA
+    // actualizar el subtítulo de la página según la categoría seleccionada
+    updateProductPageSubtitle();
   })
   .catch(error => console.error('Error loading category:', error));
 
@@ -89,4 +91,43 @@ function renderProducts(productsList) {
     `;
     wrapper.appendChild(productContainer);
   });
+}
+
+function updateProductPageSubtitle() {
+  const categoriesTitleText = document.getElementById('product-title-text');
+
+  fetch(productsURL + '/' + localStorage.getItem('catID') + '.json')
+    .then(response => response.json())
+    .then(category => {
+      const catName = category.catName;
+      categoriesTitleText.innerText = `Verás aquí todos los productos de la categoría ${catName ? String(catName).toLowerCase() : ''}.`;
+    })
+    .catch(error => {
+      console.error('Error loading category title:', error);
+    });
+}
+
+// fetch para la información de un producto 
+fetch(productInfoURL + localStorage.getItem('ProdID') + '.json')
+  .then(response => response.json())
+  .then(data => {
+    renderProductInfo(data);
+  })
+  .catch(error => console.error('Error loading product info:', error));
+
+function renderProductInfo(product) {
+  const productsContainer = document.getElementById('product-info');
+
+  productsContainer.innerHTML =
+  `
+    <div class="product-content">
+    <h1> hola </h1>
+      <div class="product-description">
+        <div class="product-description-title">
+          <h2>${product.name}</h2>
+          <h5>${product.category}</h5>
+        </div>
+      </div>
+    </div>
+  `;
 }
