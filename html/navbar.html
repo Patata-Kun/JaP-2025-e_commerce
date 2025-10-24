@@ -1,4 +1,8 @@
-  <nav class="navbar">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css">
+
+
+<nav class="navbar">
     <div class="container"> 
       <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
         <span class="hamburger-line"></span>
@@ -9,7 +13,21 @@
         <li> <a class="container-link" href="../index.html"> Inicio </a> </li>
         <li> <a class="container-link" href="../html/categories.html"> Categorías </a> </li>
         <li> <a class="container-link" href="../html/sell.html"> Vender </a> </li>
-        <li> <a class="container-link" href="../html/login.html"> Iniciar sesión </a> </li>
+      
+      <div class="account-details">
+        <div class="dropdown">
+          
+          <button class="dropdown-button"> <div class="account-avatar"></div> Mi cuenta <i class="ph-bold ph-caret-down"></i> </button>
+          <div class="dropdown-content">
+          <a href="../html/login.html"> Ingresar </a>
+          <a href="../html/profile.html"> Mi cuenta</a>
+          </div>
+        </div>
+        <div class="navbar-cart-icon">
+          <p> 0 </p>
+          <i class="ph-fill ph-shopping-cart-simple"></i>
+        </div>
+      </div>
       </ul>
     </div> 
   </nav>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi carrito - e·mercado</title>
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/categories.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
+  
+  <link rel="icon" href="../img/px/favicon.ico" sizes="32x32">
+  <link rel="icon" href="../img/svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../img/px/apple-touch-icon.png"> 
+
+</head>
+<body>
+  <div id="navbar"></div>
+
+
+  <main class="main-content">
+  
+    <div class="categories-title">
+      <h1> Mi carrito </h1>
+    </div>
+
+    <div class="cart-container">
+
+      <div class="cart-products">
+        <h2 class="cart-subtitle"> Productos </h2>
+
+        <div class="categories-container">
+        
+          <div class="cart-product-item">
+            <img class="cart-product-image" src="../img/px/prod50002_1.jpg" alt="">
+
+            <div class="cart-product-details">
+              <div class="cart-product-info">
+                <h4> Mackbook Pro - 14" </h4>
+                <h5> Versión: 512 GB </h5>
+                <h5> Color: Space Black.</h5>
+            </div>
+
+            <div class="cart-product-numbers">
+              <div class="cart-product-quantity">
+                <div class="cart-product-counter">
+                  <span class="down" onclick='decreaseCount(event, this)'><i class="ph ph-minus" style="font-size: 0.75rem"></i></span>
+                  <input type="text" value="1">
+                  <span class="up" onclick='increaseCount(event, this)'><i class="ph ph-plus" style="font-size: 0.75rem"></i></span>
+                </div>
+              <button class="button-tertiary"> <i class="ph-fill ph-trash"></i> </button>
+            </div>
+
+            <div class="cart-product-price">
+              <h4> USD 1.999</h4>
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="cart-product-item">
+            <img class="cart-product-image" src="../img/px/prod50001_1.jpg" alt="">
+
+            <div class="cart-product-details">
+              <div class="cart-product-info">
+                <h4>PC de escritorio - Ryzen 7 7700X, 32 GB, 1 TB M.2, Radeon 9060XT 16 GB </h4>
+            </div>
+
+            <div class="cart-product-numbers">
+              <div class="cart-product-quantity">
+                <div class="cart-product-counter">
+                  <span class="down" onclick='decreaseCount(event, this)'><i class="ph ph-minus" style="font-size: 0.75rem"></i></span>
+                  <input type="text" value="1">
+                  <span class="up" onclick='increaseCount(event, this)'><i class="ph ph-plus" style="font-size: 0.75rem"></i></span>
+                </div>
+              <button class="button-tertiary"> <i class="ph-fill ph-trash"></i> </button>
+            </div>
+
+            <div class="cart-product-price">
+              <h4> USD 2.599</h4>
+            </div>
+          </div>
+          </div>
+          </div>
+          
+      </div>
+    </div>
+
+      <div class="cart-summary">
+        <h2 class="cart-subtitle"> Resumen </h2>
+        <div class="product-description">
+          <div class="row-space-between">
+            <p> Productos (2) </p>
+            <p> USD 4.598</p>
+          </div>
+
+          <hr class="solid">
+
+          <div class="row-space-between">
+            <p class="cart-total"> Subtotal </p>
+            <p class="cart-total"> USD 4.598 </p>
+          </div>
+        </div>
+
+        <button class="button-primary"> Ir al pago </button>
+      </div>
+    </div>
+
+
+
+
+
+
+  </main>
+
+
+<!-- <div id="footer"> </div> -->
+
+<script src="../js/components.js"></script>
+<script src="../js/categories.js"></script>
+<script src="../js/cart.js"></script>
+
+</body>
+</html>

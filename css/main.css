@@ -52,7 +52,7 @@ h1 {
 
 h2 {
   font: 700 1.5rem/2rem "Inter", sans-serif;
-  
+  margin: 0;
 }
 
 h3 {
@@ -112,6 +112,10 @@ p {
   &:hover {
     box-shadow: var(--box-shadow);
   }
+
+  & .ph-fill {
+    font-size: 1.25rem;
+  }
 }
 
 .container-link, .container-text {
@@ -134,6 +138,43 @@ p {
   display: flex;
   flex-direction: column;
   background-color: var(--color-anchorfishBlue);
+  
+  & .dropdown-button {
+    background-color: var(--color-blueFantastic);
+    color: var(--color-palladian);
+    font: 700 1rem/1.5 "Inter", sans-serif;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+    align-items: center;
+    display: inline-flex;
+    gap: 0.25rem;
+  }
+
+  & .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-blueFantastic);
+    color: var(--color-burningFlame);
+    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    box-shadow: var(--box-shadow);
+    width: 151px;
+    /* transform: translateY(0.35rem); */
+    z-index: 1;
+
+    & a {
+      float: none;
+      display: block;
+    }
+  }
+
+  & .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
   & .navbar-links{
     display: flex;
@@ -158,6 +199,39 @@ p {
     &.active {
       color: var(--color-burningFlame);
     }
+  }
+
+  & .account-details {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    display: relative;
+  }
+
+  & .ph-bold, .ph-fill {
+    color: var(--color-palladian);
+  }
+
+  & .navbar-cart-icon {
+    font-size: 1.625rem;
+    position: relative;
+
+    & p {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-anchorfishBlue);
+      position: absolute;
+      translate: 8px -11px;
+      z-index: 1;
+    }
+  }
+
+  & .account-avatar {
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--color-palladian);
+    margin-right: 0.15rem;
   }
 }
 

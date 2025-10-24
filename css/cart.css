@@ -1,0 +1,145 @@
+/* contenedor del carrito; contiene los productos añadidos al carrito (.cart-products) y el resumen de compra (.cart-summary) */
+.cart-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+/* subtítulo de cada sección del carrito */
+.cart-subtitle {
+  padding-bottom: 1rem;
+}
+
+.cart-product-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  background-color: var(--color-grey85);
+  border-radius: 1rem;
+  padding: 1.5rem;
+
+  gap: 1rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cart-product-details {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
+
+.cart-product-info h4 {
+  margin: 0;
+}
+.cart-product-price h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.cart-product-numbers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: auto;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.cart-product-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.row-space-between {
+  display: flex;
+  justify-content: space-between;
+  
+  p {
+    margin: 0;
+  }
+}
+
+/* precio final del resumen del carrito */
+.cart-total {
+  font-weight: 700;
+  margin: 0;
+}
+
+hr.solid {
+  border: 1px solid var(--color-grey10);
+  border-radius: 1rem;
+  width: 100%;
+
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.cart-product-image {
+  border-radius: 1rem;
+  max-height: 6.3rem;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
+}
+
+
+/* contador de cantidad de un producto*/
+.cart-product-counter {
+  display: flex;
+  background-color: var(--color-grey95);
+  width: fit-content;
+  height: 1.5rem;
+
+  border-radius: 1rem;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  & input {
+    width: 2rem;
+    border: none;
+    appearance: none;
+    background: transparent;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  & span {
+    display: block;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+.button-primary {
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.button-tertiary {
+  display: flex;
+  max-height: 1.5rem;
+  padding: 0;
+  font-size: 1.25rem;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;  
+
+  & :hover {
+    transition: color 0.15s ease-in-out;
+    color: var(--color-burningFlame);
+  }
+}
