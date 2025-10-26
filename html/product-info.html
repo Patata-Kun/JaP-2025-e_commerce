@@ -25,48 +25,25 @@
 
     <div class="product-info" id="product-info">
 
-      <div class="product-carousel">
-        <img class="carousel-image" src="../img/px/prod50003_1.jpg" alt="">
-        <img class="carousel-image" src="../img/px/prod50003_2.jpg" alt="">
-        <img class="carousel-image" src="../img/px/prod50003_3.jpg" alt="">
-        <img class="carousel-image" src="../img/px/prod50003_4.jpg" alt="">
-        <img class="carousel-image" src="../img/px/prod50003_5.jpg" alt="">
+      <div class="product-carousel" id="product-carousel">
       </div>
 
       <div class="product-content">
         <div class="product-description">
           <div class="product-description-title">
-
+            <h2 id="product-name"></h2>
+            <h5 id="product-category"></h5>
         </div>
           <div class="product-description-text">
-            <p>
-            <span>Pantalla</span> -> Principal de 6,9” Dynamic AMOLED 2x, 1 a 120 Hz. De cubierta de 4,1” Super AMOLED, 60 a 120 Hz. <br>
-            <span>Cámaras</span> -> Wide de 50 MP F1.8, Ultrawide de 12 MP F2.2 y frontal de 10 MP F2.2. <br>
-            <span>Procesador</span> -> Qualcomm Snapdragon® 8 Elite para Galaxy. <br>
-            <span>Memoria</span> -> 12 GB. <br>
-            <span>Almacenamiento</span> -> 256 GB.
-            </p> 
+            <p id="product-description"></p> 
         </div>
 
         <div class="product-stars-sells">
-          <div class="product-stars">
-            <svg style="display:none;">
-              <symbol id="star" viewBox="0 0 256 256">
-                <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
-              </symbol>
-              <symbol id="star-half" viewBox="0 0 256 256">
-                <path d="M239.18,97.26A16.38,16.38,0,0,0,224.92,86l-59-4.76L143.14,26.15a16.36,16.36,0,0,0-30.27,0L90.11,81.23,31.08,86a16.46,16.46,0,0,0-9.37,28.86l45,38.83L53,211.75a16.4,16.4,0,0,0,24.5,17.82L128,198.49l50.53,31.08A16.4,16.4,0,0,0,203,211.75l-13.76-58.07,45-38.83A16.43,16.43,0,0,0,239.18,97.26Zm-15.34,5.47-48.7,42a8,8,0,0,0-2.56,7.91l14.88,62.8a.37.37,0,0,1-.17.48c-.18.14-.23.11-.38,0l-54.72-33.65A8,8,0,0,0,128,181.1V32c.24,0,.27.08.35.26L153,91.86a8,8,0,0,0,6.75,4.92l63.91,5.16c.16,0,.25,0,.34.29S224,102.63,223.84,102.73Z"></path>
-              </symbol>
-            </svg>
-            <svg width="20" height="20" fill="#ffb162"><use href="#star" /></svg>
-            <svg width="20" height="20" fill="#ffb162"><use href="#star" /></svg>
-            <svg width="20" height="20" fill="#ffb162"><use href="#star" /></svg>
-            <svg width="20" height="20" fill="#ffb162"><use href="#star" /></svg>
-            <svg width="20" height="20" fill="#ffb162"><use href="#star-half" /></svg>
-            <h5> (15) </h5>  
+          <div class="product-stars" id="product-stars">
+            <h5 id="product-reviews-count"> </h5>  
           </div>
           <div class="product-sells">
-            <h5> 8 vendidos </h5>
+            <h5 id="product-sold-count"> </h5>
           </div>
         </div>        
         </div>
@@ -78,50 +55,22 @@
 
           <div class="product-add-cart">
             <h5>Total</h5>
-            <h2>USD 1.149</h2>
-            <button onclick="window.location = 'cart.html'" class="button-secondary"> <i class="ph-fill ph-shopping-cart"></i>
-
- </button>
+            <h2 id="product-price">USD 1.149</h2>
+            <button onclick="window.location = 'cart.html'" class="button-secondary"> <i class="ph-fill ph-shopping-cart"></i> </button>
           </div>
       </div>
     </div>
   </div>
 
     <!-- SECCION COMENTARIOS -->
-    <div class="product-reviews">
-      <h3>Opiniones</h3>
+    <div class="product-reviews" id="product-reviews">
+      <h3>Comentarios</h3>
 
-      <div class="review-card">
-        <div class="review-header">
-          <span class="review-author">Juan_pedro</span>
-          <span class="review-date">— 25/02/2020 18:03:52</span>
-          <div class="review-stars">★★★★★</div>
-        </div>
-        <p class="review-text">Me encanta cortar las llamadas cerrando la tapita me recuerda a cuando era joven.</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-header">
-          <span class="review-author">María_sanchez</span>
-          <span class="review-date">— 17/01/20 18:03:52</span>
-          <div class="review-stars">★★★★☆</div>
-        </div>
-        <p class="review-text">Casi todo bien!, excepto por algún detalle de gusto personal</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-header">
-          <span class="review-author">Jazmin_H</span>
-          <span class="review-date">— 13/09/24 13:06:09</span>
-          <div class="review-stars">★★★★★</div>
-        </div>
-        <p class="review-text">Amo el dramatismo de poder cortas mis llamadas cerrando el celular y revivir el 2007</p>
-      </div>
     </div>
   </div>
 
   <div class="product-add-review">
-    <h3> Publicar opinión </h3>
+    <h3> Publicar comentario </h3>
     
     <div class="review-contents">
 
@@ -148,33 +97,17 @@
       <h3>Productos relacionados</h3>
 
       <div class="product-related-container">
-        <button class="related-nav-btn related-prev" id="relatedPrev">
+        <!-- <button class="related-nav-btn related-prev" id="relatedPrev">
           <-
-        </button>
+        </button> -->
+        
     <!-- PRODUCTO 1, PC ESCRITORIO -->
-        <div class="related-products-grid">
-          <div class="related-product-item" data-product-id="50001">
-            <img src="../img/px/prod50001_1.jpg" alt="PC escritorio">
-            <p class="related-product-name">PC escritorio - Ryzen 7 7700X, 32 GB, 1 TB M.2,<br> Radeon 9060XT 16 GB</p>
-            <p class="related-product-price">USD 1.149</p>
-          </div>
- <!-- PRODUCTO 2, MACBOOK -->
-          <div class="related-product-item" data-product-id="50002">
-            <img src="../img/px/prod50002_1.jpg" alt="MacBook Pro">
-            <p class="related-product-name">MacBook Pro M4 - 14"</p>
-            <p class="related-product-price">USD 1.999</p>
-          </div>
- <!-- PRODUCTO 3, TOCADISCOS  -->
-          <div class="related-product-item" data-product-id="50004">
-            <img src="../img/px/prod50004_1.jpg" alt="Tocadiscos">
-            <p class="related-product-name">Tocadiscos Audio-Technica AT-LP60X</p>
-            <p class="related-product-price">USD 219</p>
-          </div>
+        <div class="related-products-grid" id="related-products-grid">
         </div>
 
-        <button class="related-nav-btn related-next" id="relatedNext">
+        <!-- <button class="related-nav-btn related-next" id="relatedNext">
           ->
-        </button>
+        </button> -->
       </div>
     </div>
   </div>

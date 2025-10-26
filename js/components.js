@@ -9,6 +9,8 @@ const publishProductURL  = "https://patata-kun.github.io/e-mercado-API/sell/publ
 const cartInfoURL = "https://patata-kun.github.io/e-mercado-API/user_cart/"
 const cartBuyURL = "https://patata-kun.github.io/e-mercado-API/cart/buy.json"
 
+const USDValueUY = "https://uy.dolarapi.com/v1/cotizaciones/usd"
+
 // detecta si estamos en la carpeta raíz o en una subcarpeta
 const isInSubfolder = window.location.pathname.includes('/html/');
 
@@ -137,45 +139,3 @@ function initMobileMenu() {
     });
   }
 }
-// PRODUCTOS RELACIONADOS
-document.addEventListener('DOMContentLoaded', function() {
-  const relatedPrev = document.getElementById('relatedPrev');
-  const relatedNext = document.getElementById('relatedNext');
-  const relatedItems = document.querySelectorAll('.related-product-item');
-
-  // CLICK EN PRODUCTOS RELACIONADOS
-  relatedItems.forEach(item => {
-    item.addEventListener('click', function() {
-      const productId = this.getAttribute('data-product-id');
-      window.location.href = `product-info.html?id=${productId}`;
-    });
-  });
-
-  // PARA QUE LAS FLECHITAS DE LOS P.R FUNCIONEN, SI HAY MÁS DE 3 PRODUCTOS.
-  if (relatedPrev && relatedNext) {
-    relatedPrev.addEventListener('click', () => {
-      document.querySelector('.related-products-grid').scrollBy({
-        left: -300,
-        behavior: 'smooth'
-      });
-    });
-
-    relatedNext.addEventListener('click', () => {
-      document.querySelector('.related-products-grid').scrollBy({
-        left: 300,
-        behavior: 'smooth'
-      });
-    });
-  }
-});
-// PRODUCTOS RELACIONADOS - AL HACER CLICK TE REDIRECCIONA.
-document.addEventListener('DOMContentLoaded', function() {
-  const relatedItems = document.querySelectorAll('.related-product-item');
-  
-  relatedItems.forEach(item => {
-    item.addEventListener('click', function() {
-      const productId = this.getAttribute('data-product-id');
-      window.location.href = `product-info.html?id=${productId}`;
-    });
-  });
-});

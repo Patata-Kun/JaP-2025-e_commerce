@@ -59,7 +59,7 @@ function renderProducts(productsList) {
   wrapper.innerHTML = "";
 
   if (productsList.length === 0) {
-    wrapper.innerHTML = "<p>No hay productos en este rango de precio.</p>";
+    wrapper.innerHTML = "<p>No hay productos para mostrar.</p>";
     return;
   }
 
@@ -78,10 +78,15 @@ function renderProducts(productsList) {
               </svg>` : ''}
             ${product.name}
           </h2>
-          <p>${product.description}</p>
+          <p>${
+            Array.isArray(product.description)
+              ? product.description.join('<br>')
+              : product.description
+                ? `${product.description}`
+                : ''
+          }</p>
           <div class="product-price-sold">
             <div class="product-price">
-              <h4>Desde:</h4>
               <h2>${product.currency} ${product.cost.toLocaleString('es-UY')}</h2>
             </div>
             <p>${product.soldCount} vendidos</p>
