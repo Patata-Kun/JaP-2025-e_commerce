@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // verifica si existe un id de producto; muestra error si no
   if (!ProdID) {
-    console.error('No hay ID de producto en localStorage');
+    console.error("There is no product ID in localStorage");
     return;
   }
 
@@ -18,33 +18,40 @@ document.addEventListener('DOMContentLoaded', async () => {
     stars: document.getElementById("product-stars"),
     carouselInner: document.getElementById("product-carousel"),
     comments: document.getElementById("product-reviews"),
-    relatedProductsGrid: document.getElementById("related-products-grid")
+    relatedProductsGrid: document.getElementById("related-products-grid"),
+    
+    colorsButton: document.getElementById("button-color"),
+    versionsButton: document.getElementById("button-version")
   };
 
   try {
-    const response = await fetch(productInfoURL + localStorage.getItem  ('ProdID') + '.json');
+    const response = await fetch(productInfoURL + localStorage.getItem('ProdID') + '.json');
 
     if (!response.ok) {throw new Error("Error fetching product data");}
+
     const productData = await response.json();
 
     renderProductInfo(productData, productElements);
     renderRelatedProducts(productData.relatedProducts, productElements.relatedProductsGrid);
 
     } catch (error) {
-    console.error('Error loading product info:', error);
+    console.warn('Error loading product info:', error);
+    return;
     }
 
   try {
-    const commentsResponse = await fetch(productCommentsURL + localStorage. getItem('ProdID') + '.json');
+    const commentsResponse = await fetch(productCommentsURL + localStorage.getItem('ProdID') + '.json');
 
-    if (!commentsResponse.ok) {throw new Error("Error fetching product  comments");}
+    if (!commentsResponse.ok) {throw new Error("Error fetching product comments");}
+
     const commentsData = await commentsResponse.json();
 
     renderProductComments(commentsData, productElements.comments);
     productStars(commentsData, productElements.stars, productElements.stars);
 
     } catch (error) {
-    console.error('Error loading product comments:', error);
+    console.warn('Error loading product comments:', error);
+    return;
   }
 
 });
@@ -72,10 +79,26 @@ function renderProductInfo(product, productElements) {
 
     productElements.carouselInner.appendChild(carouselImage);
   });
+
+  if (!product.color) {
+    productElements.colorsButton.style.display = 'none';
+  }
+
+  if (!product.version) {
+    productElements.versionsButton.style.display = 'none';
+  }
+  
+  console.log(ProdID);
 };
 
 // función para renderizar los comentarios del mismo
 function renderProductComments(comments, commentsContainer) {
+  
+  if (!comments || comments.length === 0) {
+    console.warn('No comments available to display.');
+    return;
+  }
+  
   comments.reverse();
   
   comments.forEach(comment => {
@@ -98,6 +121,12 @@ function renderProductComments(comments, commentsContainer) {
 // función para renderizar productos relacionados
 function renderRelatedProducts(relatedProducts, relatedContainer) {
 
+  if (!relatedProducts || relatedProducts.length === 0) {
+    const productnt = document.createElement('p');
+    productnt.textContent = 'No hay productos relacionados disponibles.';
+    relatedContainer.appendChild(productnt);
+    return;
+  }
 
   relatedProducts.forEach(relatedProduct => {
     const relatedProductItem = document.createElement('div');
@@ -119,9 +148,14 @@ function renderRelatedProducts(relatedProducts, relatedContainer) {
   });
 };
 
+// función para mostrar las estrellas (media según los scores de los comentarios) y la cantidad total de reviews que las producen
 function productStars(comments, starsElement, reviews) {
   if (!comments || comments === undefined || comments.length === 0) {
     starsElement.innerHTML = '<i class="ph ph-star"></i>'.repeat(5);
+    const reviewCount = document.createElement('h5');
+    reviewCount.classList.add('product-reviews-count');
+    reviewCount.textContent = '(0)';
+    reviews.appendChild(reviewCount);
     return;
   }
 

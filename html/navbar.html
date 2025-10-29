@@ -1,14 +1,16 @@
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css">
-
+<!-- links para los íconos de Phosphor Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css">
 
 <nav class="navbar">
-    <div class="container"> 
-      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+    <div class="container"> <!-- navbar -->
+      
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation"> <!-- hamburger menu de celular -->
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </button>
+
       <ul class="navbar-links" id="navbar-links"> 
         <li> <a class="container-link" href="../index.html"> Inicio </a> </li>
         <li> <a class="container-link" href="../html/categories.html"> Categorías </a> </li>
@@ -16,17 +18,18 @@
       
       <div class="account-details">
         <div class="dropdown">
-          
-          <button class="dropdown-button"> <div class="account-avatar"></div> Mi cuenta <i class="ph-bold ph-caret-down"></i> </button>
+          <button class="dropdown-button" id="navbar-user">
+            <div class="account-avatar" id="navbar-avatar"></div>
+            Mi cuenta <i class="ph-bold ph-caret-down"></i>
+          </button>
+
           <div class="dropdown-content">
-          <a href="../html/login.html"> Ingresar </a>
-          <a href="../html/profile.html"> Mi cuenta</a>
+          <a href="../html/login.html" id="log-in-link"> Ingresar </a>
+          <a href="../html/profile.html" id="profile-link"> Mi cuenta</a>
+          <a href="#" id="log-out-link"> Cerrar sesión </a> 
           </div>
         </div>
-        <div class="navbar-cart-icon">
-          <p> 0 </p>
-          <i class="ph-fill ph-shopping-cart-simple"></i>
-        </div>
+        <li> <a class="container-link navbar-cart-icon" href="../html/cart.html"> <i class="ph-fill ph-shopping-cart-simple"></i> 2 </a> </li>
       </div>
       </ul>
     </div> 

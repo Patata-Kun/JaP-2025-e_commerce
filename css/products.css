@@ -127,7 +127,6 @@
   
   & h5 {
     color: var(--color-grey50);
-    margin-top: 0.15rem;
   }
 
   & .ph-fill, .ph {
@@ -301,28 +300,10 @@ span {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1rem; /* ESPACVIO ENTRE EL P.R Y SU DESCRIPCION*/
+  gap: 0.5rem; /* ESPACVIO ENTRE EL P.R Y SU DESCRIPCION*/
+  flex-shrink: 0;
 }
 
-/* CAJA QWUE CONTIENE AL P.R*/
-.related-product-image-wrapper {
-  background-color: var(--color-grey90);
-  border-radius: 0.75rem;
-  padding: 1rem;
-  width: 100%;
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  gap: 2rem;
-}
-
-/* ANIMACION PARA LA CAJA DE P.R*/
-.related-product-item:hover .related-product-image-wrapper {
-  transform: translateY(-0.25rem);
-  box-shadow: var(--box-shadow);
-}
 
 /* ESTILO DE LA IMAGEN DENTRO DE LA CAJA*/
 .related-product-item img {
@@ -339,6 +320,7 @@ span {
 /* NOMBRE DEL PRODUCTO*/
 .related-product-name {
   margin: 0;
+  line-height: 1.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -350,6 +332,7 @@ span {
 /* PRECIO DE LOS P.R*/
 .related-product-price {
   margin: 0;
+  line-height: 1.5rem;
 }
 
 /* BOTONES DE NAVEGACION, FLECHITAS*/

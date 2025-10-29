@@ -144,10 +144,11 @@ p {
   & .dropdown-button {
     background-color: var(--color-blueFantastic);
     color: var(--color-palladian);
+    max-height: 2rem;
     font: 700 1rem/1.5 "Inter", sans-serif;
     border: none;
     border-radius: 1rem;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.75rem 0.25rem 0;
     cursor: pointer;
     margin-top: 0.35rem;
     margin-bottom: 0.35rem;
@@ -160,15 +161,15 @@ p {
     display: none;
     position: absolute;
     background-color: var(--color-blueFantastic);
-    color: var(--color-burningFlame);
     border-radius: 1rem;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0 0.25rem 0;
     box-shadow: var(--box-shadow);
-    width: 151px;
-    /* transform: translateY(0.35rem); */
+    width: 128px;
     z-index: 1;
 
     & a {
+      color: var(--color-palladian);
+      font-weight: 500;
       float: none;
       display: block;
     }
@@ -211,29 +212,25 @@ p {
   }
 
   & .ph-bold, .ph-fill {
+    display: inline-flex;
+    align-self: center;
     color: var(--color-palladian);
   }
 
   & .navbar-cart-icon {
-    font-size: 1.625rem;
-    position: relative;
+    gap: 0.5rem;
 
-    & p {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--color-anchorfishBlue);
-      position: absolute;
-      translate: 8px -11px;
-      z-index: 1;
+    .ph-fill {
+      font-size: 1.5rem;
     }
   }
 
   & .account-avatar {
     border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
     background-color: var(--color-palladian);
-    margin-right: 0.15rem;
+    margin-right: 0.25rem;
     flex-shrink: 0;
   }
 }

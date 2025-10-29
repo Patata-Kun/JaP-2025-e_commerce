@@ -83,14 +83,51 @@ function setupActiveNavigation() {
   });
 }
 
+// función para actualizar el nombre de usuario en el navbar
+function updateNavbarUser() {
+  const isAuthenticated = localStorage.getItem("auth") === "true";
+  const loggedUser = localStorage.getItem("user");
+  const usernameDisplay = document.getElementById("navbar-user");
+  const logInLink = document.getElementById("log-in-link");
+  const logOutLink = document.getElementById("log-out-link");
+  const profileLink = document.getElementById("profile-link");
+  const navbarAvatar = document.getElementById("navbar-avatar");
+  const navbarAccountButton = document.getElementsByClassName("dropdown-button")[0];
+
+  if (isAuthenticated && usernameDisplay) {
+    usernameDisplay.innerHTML = `
+      <div class="account-avatar" id="navbar-avatar"></div>
+      ${loggedUser} <i class="ph-bold ph-caret-down"></i>
+    `;
+
+    logInLink.remove();
+  };
+
+  if (!isAuthenticated) {
+    logOutLink.remove();
+    profileLink.remove();
+    navbarAvatar.remove();
+
+    navbarAccountButton.style.padding = "0.25rem 0.75rem 0.25rem 0.75rem";
+  };
+
+  logOutLink.addEventListener('click', () => {
+    localStorage.removeItem("auth");
+    localStorage.removeItem("user");
+    window.location.href = "../index.html";
+  });
+}
+
 // carga la navbar y el footer cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
   if (document.getElementById('navbar')) {
     loadComponent('navbar', 'navbar').then(() => {
-      // configura la navegación activa después de cargar navbar
+      // configura la navegación activa después de cargar la navbar
       setupActiveNavigation();
       // inicializa el menú hamburger
       initMobileMenu();
+      // actualiza el nombre de usuario
+      updateNavbarUser();
     });
   }
   
