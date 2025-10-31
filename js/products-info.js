@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     } catch (error) {
     console.warn('Error loading product info:', error);
-    return;
     }
 
   try {
@@ -51,7 +50,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     } catch (error) {
     console.warn('Error loading product comments:', error);
-    return;
   }
 
 });
@@ -87,8 +85,6 @@ function renderProductInfo(product, productElements) {
   if (!product.version) {
     productElements.versionsButton.style.display = 'none';
   }
-  
-  console.log(ProdID);
 };
 
 // función para renderizar los comentarios del mismo
