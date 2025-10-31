@@ -6,7 +6,8 @@
   <title>Mi cuenta - e·mercado </title>
 
   <link rel="stylesheet" href="../css/main.css">
-
+  <link rel="stylesheet" href="../css/categories.css">
+  <link rel="stylesheet" href=""> <!-- remainder: linkear css -->
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
@@ -19,12 +20,94 @@
 <div id="navbar"></div>
 
 <main class="main-content">
+  
+  <div class="categories-title">
+    <h1> Mi cuenta </h1>
+  </div>
+  
+  <div class="profile-container"> 
+
+    <div>
+      <div class="profile-personal-info"></div>
+      <h2> Informacion personal </h2>
+
+      <div class="container-personal-info">
+        
+        <form>
+
+          
+          <label for="name">Nombre/s</label>
+          <input type="text" class="" name="name" id="name">
+
+          <br>
+          
+          <label for="last-name">Apellido/s</label>
+          <input type="text" class="" name="last-name" id="last-name">
+          
+          <br>
+          
+          <label for="ID-number"> Documento de Identidad </label>
+          <input type="text" class="" name="ID-number" id="ID-number">
+
+          <br>
+
+          <fieldset class="">
+            <legend> Dirección </legend>
+
+            <div>
+              <input type="text" class="" name="street" id="street">
+              <input type="text" class="" name="apartment" id="apartment">
+              <input type="text" class="" name="city" id="city">
+            </div>
+
+          </fieldset>
+          
+          <br>
+
+          <label for="email">Correo electrónico</label>
+          <input type="text" class="" name="e-mail" id="email">
+
+          <br>
+        
+          <label for="phone"> Teléfono </label>
+          <input type="text" class="" name="phone" id="phone">
+
+          <br>
+
+          <label for="username"> Nombre de usuario </label>
+          <input type="text" name="username" id="username">
+
+        </form>
+
+        <br><br><br>
+
+        <button class="button-secondary" id="save-user-info">
+          Actualizar información
+        </button>
+
+      </div>
+    
+
+    </div>
+
+
+
+
+  </div>
+  
+
+
+
+
+
+
 
 </main>
 
 <div id="footer"></div>
 
 <script src="../js/components.js"></script>
+<script src="../js/profile.js"> </script>
 
 </body>
 </html>
