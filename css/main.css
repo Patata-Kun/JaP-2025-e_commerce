@@ -18,20 +18,14 @@
 }
 
 .darkmode {
-
   --color-palladian: oklch(0.2178 0 0);
   --color-burningFlame: oklch(0.8199 0.1318 64.46);
-  --color-jap: oklch(0.7396 0.1656 65.25);
-  --color-grey95: oklch(96.115% 0.00011 271.152);
-  --color-grey85: oklch(0.8853 0 0);
-  --color-grey20: oklch(0.3211 0 0);
-  --color-grey10: oklch(0.8853 0 0);
-
+  --color-grey95: oklch(0.8853 0 0);
+  --color-grey85: oklch(0.3211 0 0);
+  --color-grey10: oklch(96.115% 0.00011 271.152);
 };
 
 #theme-switch{
-
-
   height: 100px;
   width: 50px;
   padding: 0;
@@ -118,9 +112,10 @@ p {
   align-items: center;
   gap: 0.5rem;
   max-height: 3rem;
+  color: oklch(0.2178 0 0);
 
   font: 700 1.25rem/1rem "Inter", sans-serif;
-  background-color: var(--color-grey95);
+  background-color: oklch(96.115% 0.00011 271.152);
   border: none;
   border-radius: 1rem;
   padding: 1rem;
@@ -133,7 +128,10 @@ p {
     box-shadow: var(--box-shadow);
   }
 
-  
+  .darkmode {
+    color: oklch(73.777% 0.1534 75.497);
+  }
+
 }
 
 .button-secondary {
@@ -161,7 +159,7 @@ p {
 }
 
 .container-link, .container-text {
-  color: var(--color-palladian);
+  color: oklch(0.9352 0.0144 84.58);
   font: 700 16px/1.5 "Inter", sans-serif;
   text-align: center;
 }
@@ -183,7 +181,7 @@ p {
   
   & .dropdown-button {
     background-color: var(--color-blueFantastic);
-    color: var(--color-palladian);
+    color: oklch(0.9352 0.0144 84.58);
     max-height: 2rem;
     font: 700 1rem/1.5 "Inter", sans-serif;
     border: none;
@@ -204,11 +202,11 @@ p {
     border-radius: 1rem;
     padding: 0.25rem 0 0.25rem 0;
     box-shadow: var(--box-shadow);
-    width: 128px;
+    width: 133.79px;
     z-index: 1;
 
     & a {
-      color: var(--color-palladian);
+      color: oklch(0.9352 0.0144 84.58);
       font-weight: 500;
       float: none;
       display: block;
@@ -254,7 +252,7 @@ p {
   & .ph-bold, .ph-fill {
     display: inline-flex;
     align-self: center;
-    color: var(--color-palladian);
+    color: oklch(0.9352 0.0144 84.58);
   }
 
   & .navbar-cart-icon {
@@ -269,7 +267,7 @@ p {
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
-    background-color: var(--color-palladian);
+    background-color: oklch(0.9352 0.0144 84.58);
     margin-right: 0.25rem;
     flex-shrink: 0;
   }

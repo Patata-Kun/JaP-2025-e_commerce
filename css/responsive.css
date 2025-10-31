@@ -13,7 +13,7 @@
 .hamburger-line {
   width: 25px;
   height: 3px;
-  background-color: var(--color-palladian);
+  background-color: oklch(0.9352 0.0144 84.58);
   margin: 3px 0;
   transition: 0.3s;
   border-radius: 2px;
