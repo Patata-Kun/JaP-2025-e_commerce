@@ -1,113 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi cuenta - e·mercado </title>
+  <title>Mi cuenta - e·mercado</title>
 
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/categories.css">
-  <link rel="stylesheet" href=""> <!-- remainder: linkear css -->
+   <link rel="stylesheet" href="../css/profile.css">  <!-- no me olvide -->
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
-  
+
   <link rel="icon" href="../img/px/favicon.ico" sizes="32x32">
   <link rel="icon" href="../img/svg/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../img/px/apple-touch-icon.png"> 
+  <link rel="apple-touch-icon" href="../img/px/apple-touch-icon.png">
 </head>
 <body>
 <div id="navbar"></div>
 
-<main class="main-content">
-  
-  <div class="categories-title">
-    <h1> Mi cuenta </h1>
-  </div>
-  
-  <div class="profile-container"> 
+  <main class="wrap">
+    <h1 class="page-title">Mi cuenta</h1>
+ 
+    <!-- subtitulos de los 2 campos a completar -->
+    <section class="grid">
+      <h2 class="section-title section-title--left">Información personal</h2>
+      <h2 class="section-title section-title--right">Preferencias</h2>
 
-    <div>
-      <div class="profile-personal-info"></div>
-      <h2> Informacion personal </h2>
+      <!-- campo 1. 1 Informacion personal, nombre -->
+      <article class="card card--left">
+        <div class="row row--2"> <!-- modifica los contenedores de texto a rellenar con nuestra info -->
+          <label class="field">
+            <label for="name">Nombre/s</label>
+            <input class="input" type="text" placeholder="Jeromin" /> <!-- el placeholder es el texto guia que tenemos en los contenbedores de texto (en clarito) y se borra cuando ponemos nuestra info -->
+          </label>
 
-      <div class="container-personal-info">
-        
-        <form>
+      <!-- campo 2, apellido -->
+          <label class="field">
+           <label for="last-name">Apellido/s</label>
+            <input class="input" type="text" placeholder="Caraiaher" />
+          </label>
+        </div>
+      <!-- campo 3, CI -->
+        <div class="row">
+          <label class="field field--full">
+            <label for="ID-number">Documento de identidad</label>
+            <input class="input" type="text" placeholder="012345678"/>
+          </label>
+        </div>
 
-          
-          <label for="name">Nombre/s</label>
-          <input type="text" class="" name="name" id="name">
+         <!-- campo 4, direccion 1.1 -->
+        <div class="row row--3">
+          <label class="field">
+            <label for="Direccion">Direccion</label>
+            <input class="input" type="text" placeholder="Calle y número de puerta" />
+          </label>
+ <!-- campo 4,direccion,1.2  -->
+          <label class="field">
+            <span class="label">&nbsp;</span>
+            <input class="input" type="text" placeholder="Apartamento, indicaciones, etc." />
+          </label>
 
-          <br>
-          
-          <label for="last-name">Apellido/s</label>
-          <input type="text" class="" name="last-name" id="last-name">
-          
-          <br>
-          
-          <label for="ID-number"> Documento de Identidad </label>
-          <input type="text" class="" name="ID-number" id="ID-number">
+           <!-- campo 4,direccion,1.3  -->
+          <label class="field">
+            <span class="label">&nbsp;</span>
+            <input class="input" type="text" placeholder="Departamento" />
+          </label>
+        </div>
 
-          <br>
+         <!-- campo 5, correo electronico -->
+        <div class="row row--2">
+          <label class="field">
+            <label for="email">Correo electrónico</label>
+            <input class="input" type="email" value="totally-real-email@real.com" />
+          </label>
 
-          <fieldset class="">
-            <legend> Dirección </legend>
+           <!-- campo 6, telefono -->
+          <label class="field">
+            <label for="phone"> Teléfono </label>
+            <input class="input" type="tel" value="+420 602 999 999" />
+          </label>
+        </div>
+      </article>
 
-            <div>
-              <input type="text" class="" name="street" id="street">
-              <input type="text" class="" name="apartment" id="apartment">
-              <input type="text" class="" name="city" id="city">
-            </div>
+      
 
-          </fieldset>
-          
-          <br>
-
-          <label for="email">Correo electrónico</label>
-          <input type="text" class="" name="e-mail" id="email">
-
-          <br>
-        
-          <label for="phone"> Teléfono </label>
-          <input type="text" class="" name="phone" id="phone">
-
-          <br>
-
+      <!-- campo 2. 1 Preferencias , nombre de usurario -->
+      <aside class="card card--right">
+        <label class="field field--full">
           <label for="username"> Nombre de usuario </label>
-          <input type="text" name="username" id="username">
+          <input class="input" type="text" value="Grupo 5" />
+        </label>
 
-        </form>
+        <!-- campo 2, Imagen de perfil y boton de subir imagen  -->
+        <div class="block">
+          <span class="label">Imagen de perfil</span>
+          <div class="row row--avatar">
+            <img class="avatar" src="" alt="Avatar de perfil">  <!-- aca va el emoji avatar del de la foto de perfil -->
+            <button class="btn">Subir imagen</button>
+          </div>
+        </div>
 
-        <br><br><br>
+        <!-- campo 3, Tema modo claro -->
+        <div class="block block--tema">
+          <span class="label">Tema</span>
+          <div class="stack">
+            <img class="tema" src="" alt="Icono de tema">  <!-- aca va el emoji avatar del sol, modop claro -->
+          </div>
+        </div>
 
-        <button class="button-secondary" id="save-user-info">
-          Actualizar información
-        </button>
+        <!-- campo 4, Moneda -->
+        <div class="block">
+          <span class="label">Moneda</span>
+          <div class="chips">
+            <button class="chip chip--active">USD</button>
+            <button class="chip">UYU</button>
+          </div>
+        </div>
 
-      </div>
-    
+      </aside>
 
-    </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    © Este sitio forma parte de Jóvenes a Programar - Grupo 5
+  </footer>
 
-
-
-  </div>
-  
-
-
-
-
-
-
-
-</main>
-
-<div id="footer"></div>
-
-<script src="../js/components.js"></script>
-<script src="../js/profile.js"> </script>
+  <script src="../js/components.js"></script>
+  <script src="../js/categories.js"></script>
+  <script src="../js/products.js"></script>
 
 </body>
 </html>
