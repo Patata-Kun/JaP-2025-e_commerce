@@ -93,6 +93,7 @@ function updateNavbarUser() {
   const profileLink = document.getElementById("profile-link");
   const navbarAvatar = document.getElementById("navbar-avatar");
   const navbarAccountButton = document.getElementsByClassName("dropdown-button")[0];
+  const storedAvatar = localStorage.getItem('profileAvatar');
 
   if (isAuthenticated && usernameDisplay) {
     usernameDisplay.innerHTML = `
@@ -101,6 +102,13 @@ function updateNavbarUser() {
     `;
 
     logInLink.remove();
+    
+    const avatarElement = document.getElementById("navbar-avatar");
+    if (storedAvatar && avatarElement) {
+      avatarElement.style.backgroundImage = `url(${storedAvatar})`;
+      avatarElement.style.backgroundSize = 'cover';
+      avatarElement.style.backgroundPosition = 'center';
+    }
   };
 
   if (!isAuthenticated) {
