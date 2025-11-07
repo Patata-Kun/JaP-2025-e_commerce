@@ -176,3 +176,38 @@ function productStars(comments, starsElement, reviews) {
 }
 
 
+// FUNCIONALIDAD CARRITO 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const addToCartBtn = document.getElementById("add-to-cart");
+
+  if (!addToCartBtn) return;
+
+  addToCartBtn.addEventListener("click", async () => {
+    const ProdID = localStorage.getItem("ProdID");
+    if (!ProdID) return;
+
+    const response = await fetch(productInfoURL + ProdID + ".json");
+    if (!response.ok) return;
+    const product = await response.json();
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingProduct = cart.find(item => item.id === product.id);
+
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cart.push({
+        id: product.id,
+        name: product.name,
+        cost: product.cost,
+        currency: product.currency,
+        image: product.images[0],
+        quantity: 1
+      });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Producto agregado al carrito 😊");
+  });
+});
