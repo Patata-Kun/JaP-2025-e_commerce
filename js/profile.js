@@ -76,6 +76,8 @@ function updateProfileAvatar() {
         localStorage.setItem('profileAvatar', e.target.result);
       }
       reader.readAsDataURL(file);
+      window.location.reload();
+      
     } else {
       profilePreferencesElements.avatar.src = '../img/px/avatar-default.png';
       localStorage.removeItem('profileAvatar');

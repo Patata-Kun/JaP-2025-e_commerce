@@ -2,12 +2,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const ProdID = localStorage.getItem('ProdID');
 
-  // verifica si existe un id de producto; muestra error si no
-  if (!ProdID) {
-    console.error("There is no product ID in localStorage");
-    return;
-  }
-
 // constante array de los elementos necesarios para la info de los productos; así no se está constantemente llamando a cada uno a través de "getElementById" (también es más fácil de entender el código después)
   const productElements = {
     name: document.getElementById("product-name"),

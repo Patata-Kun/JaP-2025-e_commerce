@@ -9,7 +9,6 @@ const publishProductURL  = "https://patata-kun.github.io/e-mercado-API/sell/publ
 const cartInfoURL = "https://patata-kun.github.io/e-mercado-API/user_cart/"
 const cartBuyURL = "https://patata-kun.github.io/e-mercado-API/cart/buy.json"
 
-const USDValueUY = "https://uy.dolarapi.com/v1/cotizaciones/usd"
 
 // detecta si estamos en la carpeta raíz o en una subcarpeta
 const isInSubfolder = window.location.pathname.includes('/html/');
@@ -84,14 +83,13 @@ function setupActiveNavigation() {
 }
 
 // función para actualizar el nombre de usuario en el navbar
-function updateNavbarUser() {
+function updateNavbar() {
   const isAuthenticated = localStorage.getItem("auth") === "true";
   const loggedUser = localStorage.getItem("user");
   const usernameDisplay = document.getElementById("navbar-user");
   const logInLink = document.getElementById("log-in-link");
   const logOutLink = document.getElementById("log-out-link");
   const profileLink = document.getElementById("profile-link");
-  const navbarAvatar = document.getElementById("navbar-avatar");
   const navbarAccountButton = document.getElementsByClassName("dropdown-button")[0];
   const storedAvatar = localStorage.getItem('profileAvatar');
 
@@ -103,11 +101,11 @@ function updateNavbarUser() {
 
     logInLink.remove();
     
-    const avatarElement = document.getElementById("navbar-avatar");
-    if (storedAvatar && avatarElement) {
-      avatarElement.style.backgroundImage = `url(${storedAvatar})`;
-      avatarElement.style.backgroundSize = 'cover';
-      avatarElement.style.backgroundPosition = 'center';
+    const navbarAvatar = document.getElementById("navbar-avatar");
+    if (storedAvatar && navbarAvatar) {
+      navbarAvatar.style.backgroundImage = `url(${storedAvatar})`;
+      navbarAvatar.style.backgroundSize = 'cover';
+      navbarAvatar.style.backgroundPosition = 'center';
     }
   };
 
@@ -126,6 +124,18 @@ function updateNavbarUser() {
   });
 }
 
+function updateCartCountBadge() {
+  const cartBadge = document.getElementById('navbar-cart-badge');
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+  if(cartItems.length > 0) {
+    const cartTotalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+    cartBadge.innerHTML = `<i class="ph-fill ph-shopping-cart-simple"></i> ${cartTotalQuantity}`;
+  } else {
+    cartBadge.innerHTML = `<i class="ph-fill ph-shopping-cart-simple"></i> 0 </a>`;
+  }
+}
+
 // carga la navbar y el footer cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
   if (document.getElementById('navbar')) {
@@ -134,8 +144,10 @@ document.addEventListener('DOMContentLoaded', function() {
       setupActiveNavigation();
       // inicializa el menú hamburger
       initMobileMenu();
-      // actualiza el nombre de usuario
-      updateNavbarUser();
+      // actualiza la navbar // debería separar la función en varias pero me da paja
+      updateNavbar();
+      // actualiza el contador del carrito
+      updateCartCountBadge();
     });
   }
   

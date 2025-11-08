@@ -168,6 +168,7 @@ body.darkmode .label{
   place-items: center;
   background: var(--color-grey95);
   border: 1px solid #c9ccd2;
+  object-fit: cover;
 }
 
 
@@ -206,5 +207,22 @@ body.darkmode .label{
 }
 .chip--active {
   background:  #FFB162;
-  color: oklch(0.3211 0 0);
+  color: rgb(51, 51, 51);
+}
+
+#update-avatar-button {
+  display: none;
+}
+
+#avatar-upload {
+  display: flex;
+  font: 400 1rem/1rem "Inter", sans-serif;
+  align-items: center;
+  height: 2rem;
+
+  border: none;
+  background-color: var(--color-grey95);
+  border-radius: 1rem;
+  padding: 0.50rem 0.75rem;
+  cursor: pointer;
 }

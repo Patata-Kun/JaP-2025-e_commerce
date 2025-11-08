@@ -1,3 +1,15 @@
+// init de la función del valor del dólar
+const USDValueUYU = "https://uy.dolarapi.com/v1/cotizaciones/usd"
+
+fetch(USDValueUYU)
+  .then(response => response.json())
+  .then(data => {
+    localStorage.setItem("USDValue", data.venta);
+  })
+  .catch(error => {
+    console.error("Error al obtener el valor del dólar:", error);
+  });
+
 function validateNumberInput(input) {
   input.value = input.value.replace(/[^0-9]/g, ''); // Impide que se coloquen caracteres que no sean un número reemplazándolos por nada
   
@@ -105,13 +117,16 @@ function removeCartItem(name) {
 function renderCart() {
   const cartContainer = document.querySelector(".categories-container"); //BUSCA EL ELEMENTO CON ESA CLASE <div class="categories-container"> -- LINEA 35 cart.HTML
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartSummary = document.querySelector(".cart-summary");
+  const cartSubContainer = document.getElementById("cart-container");
 
   if (!cartContainer) return;
 
   if (cart.length === 0) {
+    cartSummary.style.display = "none";
+    cartSubContainer.style.gridTemplateColumns = "1fr";
+
     cartContainer.innerHTML = "<p>Tu carrito está vacío</p>";
-    const subtotalElement = document.querySelector(".cart-summary .cart-total:last-child");
-    if (subtotalElement) subtotalElement.textContent = "UYU 0";
     return;
   }
 
