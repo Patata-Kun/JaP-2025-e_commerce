@@ -82,7 +82,7 @@ function setupActiveNavigation() {
   });
 }
 
-// función para actualizar el nombre de usuario en el navbar
+// función para actualizar la navbar (nombre de usuario, opciones de log in o log out, etc.)
 function updateNavbar() {
   const isAuthenticated = localStorage.getItem("auth") === "true";
   const loggedUser = localStorage.getItem("user");
@@ -90,6 +90,7 @@ function updateNavbar() {
   const logInLink = document.getElementById("log-in-link");
   const logOutLink = document.getElementById("log-out-link");
   const profileLink = document.getElementById("profile-link");
+  const navbarAvatar = document.getElementById("navbar-avatar");
   const navbarAccountButton = document.getElementsByClassName("dropdown-button")[0];
   const storedAvatar = localStorage.getItem('profileAvatar');
 
