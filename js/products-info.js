@@ -202,6 +202,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCountBadge();
     alert("Producto agregado al carrito 😊");
+    window.location.href = "../html/cart.html";
   });
 });

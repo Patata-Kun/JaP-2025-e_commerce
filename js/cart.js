@@ -40,6 +40,7 @@ function increaseCount(e, btn) {
     value = isNaN(value) ? 1 : value + 1; // SI EL VALOR NO ES UN NUMERO, QUEDA EN 1 , SINO LO AUMENTA EN 1
     input.value = value; // ACTUALIZA LO MOSTRADO EN INPUT.
     updateCartQuantity(btn, value); // GUARDA LA NUEVA CANTIDAD EN localStorage , CALCULA EL PRECIO DEL PRODUCTO Y ACTUALIZA EL VALOR EN EL CARRITO.
+    updateCartCountBadge(); // <-- actualiza el badge de la navbar
   }
 }
 
@@ -52,6 +53,7 @@ function decreaseCount(e, btn) {
     value = isNaN(value) ? 1 : value - 1; // SI EL VALOR NO ES UN NUMERO, QUEDA EN 1 , SINO LE RESTA 1
     input.value = value; 
     updateCartQuantity(btn, value); 
+    updateCartCountBadge(); // <-- actualiza el badge de la navbar
   }
 }
 
@@ -176,10 +178,11 @@ function renderCart() {
     btn.addEventListener("click", (e) => {
       const name = e.currentTarget.dataset.name;
       removeCartItem(name);
+      updateCartCountBadge(); // <-- actualiza el badge de la navbar
     });
   });
 
-  updateCartTotal(); 
+  updateCartTotal();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

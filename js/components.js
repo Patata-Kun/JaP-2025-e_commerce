@@ -86,16 +86,15 @@ function setupActiveNavigation() {
 function updateNavbar() {
   const isAuthenticated = localStorage.getItem("auth") === "true";
   const loggedUser = localStorage.getItem("user");
-  const usernameDisplay = document.getElementById("navbar-user");
+  const navbarUserButton = document.getElementById("navbar-user-details");
   const logInLink = document.getElementById("log-in-link");
   const logOutLink = document.getElementById("log-out-link");
   const profileLink = document.getElementById("profile-link");
   const navbarAvatar = document.getElementById("navbar-avatar");
-  const navbarAccountButton = document.getElementsByClassName("dropdown-button")[0];
   const storedAvatar = localStorage.getItem('profileAvatar');
 
-  if (isAuthenticated && usernameDisplay) {
-    usernameDisplay.innerHTML = `
+  if (isAuthenticated && navbarUserButton) {
+    navbarUserButton.innerHTML = `
       <div class="account-avatar" id="navbar-avatar"></div>
       ${loggedUser} <i class="ph-bold ph-caret-down"></i>
     `;
@@ -115,7 +114,7 @@ function updateNavbar() {
     profileLink.remove();
     navbarAvatar.remove();
 
-    navbarAccountButton.style.padding = "0.25rem 0.75rem 0.25rem 0.75rem";
+    navbarUserButton.style.padding = "0.25rem 0.75rem 0.25rem 0.75rem";
   };
 
   logOutLink.addEventListener('click', () => {
@@ -125,6 +124,7 @@ function updateNavbar() {
   });
 }
 
+// función para actualizar el contador del carrito en la navbar
 function updateCartCountBadge() {
   const cartBadge = document.getElementById('navbar-cart-badge');
   const cartItems = JSON.parse(localStorage.getItem("cart")) || [];

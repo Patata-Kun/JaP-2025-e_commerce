@@ -158,7 +158,7 @@ p {
 
 .container-link, .container-text {
   color: oklch(0.9352 0.0144 84.58);
-  font: 700 16px/1.5 "Inter", sans-serif;
+  font: 700 1rem/1.5 "Inter", sans-serif;
   text-align: center;
 }
 
@@ -277,7 +277,11 @@ footer {
   left: 0;
   right: 0;
   font-size: 0.75rem;
+  font-weight: 700;
   margin-bottom: 0;
   padding-bottom: 0;
-}
 
+  p, a {
+    color: oklch(0.9352 0.0144 84.58);
+  }
+}
