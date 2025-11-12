@@ -12,7 +12,6 @@
 .product-info {
   display: flex;
   justify-content: center;
-  flex-flow: row;
   gap: 1rem;
   width: 100%;
 }
@@ -76,7 +75,8 @@
   width: auto;
   aspect-ratio: 16 / 9;
   border-radius: 1rem;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: white;
   flex-shrink: 0;
   scroll-snap-stop: always;
   }
@@ -114,7 +114,7 @@
 /* calificación de un producto - incluye las estrellas, el número de calificaciones y el total de vendidos */
 .product-stars-sells {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 
@@ -142,12 +142,14 @@ span {
 /* botones de opciones de los productos - contiene el contenedor de los botones (.buttons-container) el precio del producto y el botón de añadir al carrito (.product-add-cart) */
 .product-options {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 
   .product-add-cart {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     gap: 1rem;
   }

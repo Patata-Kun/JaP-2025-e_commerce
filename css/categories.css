@@ -48,7 +48,8 @@
   box-shadow: var(--box-shadow);
   border-radius: 1rem;
   max-width: 24rem;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: white;
   aspect-ratio: 16 / 9;
   height: 100%;
 }
