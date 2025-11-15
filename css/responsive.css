@@ -77,9 +77,9 @@
     font-size: 1.25rem;
   }
 
-.icon-car-type {
-  width: 20px;
-  height: 20px;
+  .icon-car-type {
+    width: 20px;
+    height: 20px;
 }
 
   .product-price-sold h4, .product-price p {

@@ -2,15 +2,15 @@
 .cart-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: auto;
+  grid-auto-flow: row;
   gap: 2rem;
   margin: 0 auto;
 }
 
 /* subtítulo de cada sección del carrito */
 .cart-subtitle {
-  padding-bottom: 1rem;
-}
+    padding-bottom: 1rem;
+  }
 
 .cart-product-item {
   display: flex;
@@ -22,10 +22,6 @@
   padding: 1.5rem;
 
   gap: 1rem;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .cart-product-details {
@@ -63,14 +59,15 @@
 .row-space-between {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
   
   p {
     margin: 0;
   }
 }
 
-/* precio final del resumen del carrito */
-.cart-total {
+/* precio subtotal del resumen del carrito */
+.cart-subtotal {
   font-weight: 700;
   margin: 0;
 }
@@ -86,7 +83,8 @@ hr.solid {
 .cart-product-image {
   border-radius: 1rem;
   max-height: 6.3rem;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: white;
   aspect-ratio: 16 / 9;
   flex-shrink: 0;
 }
@@ -125,6 +123,7 @@ hr.solid {
 
   & .ph {
     color: oklch(0.2178 0 0);
+    font-size: 0.75rem;
   }
 }
 

@@ -92,7 +92,7 @@ function updateCartTotal() { //RECUPERO EL CARRITO DESDE localStorage
   });
 
 
-  const subtotalElement = document.querySelector(".cart-summary .cart-total:last-child"); 
+  const subtotalElement = document.querySelector(".cart-summary .cart-subtotal:last-child"); 
   const productosElement = document.querySelector(".cart-summary .product-description p:first-child");
 
   if (subtotalElement) {
@@ -150,9 +150,9 @@ function renderCart() {
         <div class="cart-product-numbers">
           <div class="cart-product-quantity">
             <div class="cart-product-counter">
-              <span class="down" onclick='decreaseCount(event, this)'><i class="ph ph-minus" style="font-size: 0.75rem"></i></span>
+              <span class="down" onclick='decreaseCount(event, this)'><i class="ph ph-minus"></i></span>
               <input type="text" value="${item.quantity}">
-              <span class="up" onclick='increaseCount(event, this)'><i class="ph ph-plus" style="font-size: 0.75rem"></i></span>
+              <span class="up" onclick='increaseCount(event, this)'><i class="ph ph-plus"></i></span>
             </div>
             <button class="button-tertiary" data-name="${item.name}">
               <i class="ph-fill ph-trash"></i>

@@ -112,7 +112,7 @@ p {
   max-height: 3rem;
   color: oklch(0.2178 0 0);
 
-  font: 700 1.25rem/1rem "Inter", sans-serif;
+  font: 700 1.25rem/1.25rem "Inter", sans-serif;
   background-color: oklch(96.115% 0.00011 271.152);
   border: none;
   border-radius: 1rem;
