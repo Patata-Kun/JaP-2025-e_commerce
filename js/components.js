@@ -120,6 +120,7 @@ function updateNavbar() {
   logOutLink.addEventListener('click', () => {
     localStorage.removeItem("auth");
     localStorage.removeItem("user");
+    localStorage.removeItem("cart");
     window.location.href = "../index.html";
   });
 }
@@ -135,6 +136,7 @@ function updateCartCountBadge() {
   } else {
     cartBadge.innerHTML = `<i class="ph-fill ph-shopping-cart-simple"></i> 0 </a>`;
   }
+
 }
 
 // carga la navbar y el footer cuando el DOM esté listo

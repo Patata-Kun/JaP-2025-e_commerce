@@ -90,7 +90,8 @@ function updateCartTotal() { //RECUPERO EL CARRITO DESDE localStorage
   cart.forEach(item => {
     total += item.cost * item.quantity;
   });
-
+  
+  const cartTotalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const subtotalElement = document.querySelector(".cart-summary .cart-subtotal:last-child"); 
   const productosElement = document.querySelector(".cart-summary .product-description p:first-child");
@@ -100,7 +101,7 @@ function updateCartTotal() { //RECUPERO EL CARRITO DESDE localStorage
   }
 
   if (productosElement) {
-    productosElement.textContent = `Productos (${cart.length})`; // ACTUALIZA LA CANTIDAD DEL PRODUCTO CUANDO AGREGO O QUITO UNO NUEVO.
+    productosElement.textContent = `Productos (${cartTotalQuantity})`; // ACTUALIZA LA CANTIDAD DEL PRODUCTO CUANDO AGREGO O QUITO UNO NUEVO.
   }
 }
 
@@ -187,5 +188,113 @@ function renderCart() {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderCart();
+  cartModalPaymentSetUp();
+  cartModalPaymentShowDetails();
 });
 
+// modal de los métodos de pago
+function cartModalPaymentSetUp() { 
+  const openModalPaymentButton = document.getElementById("open-modal-payment");
+  const closeModalPaymentButton = document.getElementById("close-modal-payment");
+  const modalPayment = document.getElementById("modal-payment");
+
+  openModalPaymentButton.addEventListener("click", () => {
+    modalPayment.showModal();
+  });
+  closeModalPaymentButton.addEventListener("click", () => {
+    modalPayment.close();
+  });
+
+  modalPayment.addEventListener("click", (e) => {
+    const dialogDimensions = modalPayment.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      modalPayment.close();
+    }
+  });
+
+  // funcionalidad de los dropdowns
+  const paymentDropdowns = document.querySelectorAll(".payment-method-dropdown");
+  
+  paymentDropdowns.forEach(dropdown => {
+    const button = dropdown.querySelector(".payment-method-button");
+    const block = dropdown.querySelector(".payment-method-block");
+    
+    button.addEventListener('click', () => {
+      paymentDropdowns.forEach(otherDropdown => {
+        if (otherDropdown !== dropdown) {
+          const otherBlock = otherDropdown.querySelector(".payment-method-block");
+          otherBlock.classList.remove("open");
+        }
+      });
+
+      block.classList.toggle("open");
+    });
+  });
+
+  // oculta los detalles del método de pago para que no se creen espacios raros
+  const paymentDetailsDisplay = {
+    title: document.getElementById("payment-method-display"),
+    details: document.getElementById("payment-method-display-details"),
+  }
+  paymentDetailsDisplay.title.style.display = "none";
+  paymentDetailsDisplay.details.style.display = "none";
+};
+
+
+// función para mostrar el método de pago seleccionado en la sección de "método de pago" del carrito
+function cartModalPaymentShowDetails() {
+  const paymentDetailsDisplay = {
+    title: document.getElementById("payment-method-display"),
+    details: document.getElementById("payment-method-display-details"),
+  }
+
+  const paymentConfig = [
+    {
+      buttonId: "debit-card-add",
+      title: "Tarjeta de débito",
+      nameId: "debit-card-name",
+      numberId: "debit-card-number",
+    },
+    {
+      buttonId: "credit-card-add",
+      title: "Tarjeta de crédito",
+      nameId: "credit-card-name",
+      numberId: "credit-card-number",
+      paymentsId: "credit-card-payments"
+    },
+    {
+      buttonId: "bank-account-add",
+      title: "Transferencia bancaria",
+      nameId: "bank-account-holder",
+      numberId: "bank-account-number"
+    }
+  ];
+
+  // Función reutilizable para mostrar detalles
+  function showPaymentDetails(title, name, number, payments) {
+    paymentDetailsDisplay.title.style.display = "block";
+    paymentDetailsDisplay.details.style.display = "block";
+    paymentDetailsDisplay.title.textContent = title;
+    paymentDetailsDisplay.details.textContent = payments === "" 
+      ? `${name} — ${number.slice(-4)}`
+      : `${name} — ${number.slice(-4)} — ${payments} cuotas`;
+  }
+
+  // Agregar event listeners para cada método de pago
+  paymentConfig.forEach(config => {
+    const button = document.getElementById(config.buttonId);
+    if (button) {
+      button.addEventListener("click", () => {
+        const name = document.getElementById(config.nameId).value;
+        const number = document.getElementById(config.numberId).value;
+        const payments = config.paymentsId ? document.getElementById(config.paymentsId).value : "";
+        showPaymentDetails(config.title, name, number, payments);
+      });
+    }
+  });
+};

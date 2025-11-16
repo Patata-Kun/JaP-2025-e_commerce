@@ -38,6 +38,139 @@
 
       <div class="cart-summary">
         <h2 class="cart-subtitle"> Resumen </h2>
+
+        <h4 class="section-subtitle"> Envío </h4>
+        <div class="product-description">
+          <form class="shipping-form">
+            <input type="radio" name="shipping" id="premium-shipping" value="premium-shipping">
+            <label for="premium-shipping"> Premium (2 a 5 días) — 15% </label>
+            <br>
+            <input type="radio" name="shipping" id="express-shipping" value="express-shipping">
+            <label for="express-shipping"> Express (5 a 8 días) — 7% </label>
+            <br>
+            <input type="radio" name="shipping" id="standard-shipping" value="standard-shipping" checked>
+            <label for="standard-shipping"> Standard (12 a 15 días) — 5%</label>
+          </form>
+        </div>
+
+        <h4 class="section-subtitle"> Método de pago </h4>
+        <div class="product-description">
+          <h4 class="section-subtitle" id="payment-method-display"></h4>
+          <p class="section-subtitle" id="payment-method-display-details"></p>
+          <a href="#" id="open-modal-payment"> Seleccionar método de pago </a>
+        </div>
+
+        <dialog id="modal-payment">
+          
+          <div class="modal-payment-title">
+            <h2> Método de pago </h2> <button class="button-secondary" id="close-modal-payment"> <i class="ph-bold ph-x"></i> </button>
+          </div>
+
+          <div class="payment-method-dropdown">
+            <button class="payment-method-button" type="button">
+              Tarjeta de débito <i class="ph-bold ph-caret-down"></i>
+            </button>
+
+            <div class="payment-method-block">
+              <form class="payment-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="debit-card-number"> Número de la tarjeta</label>
+                    <input type="text" id="debit-card-number" placeholder="0000 0000 0000 0000">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="debit-card-expiry"> Fecha de expiración </label>
+                    <input type="text" id="debit-card-expiry" placeholder="MM / AA">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="debit-card-cvv"> CVV / CVC </label>
+                    <input type="text" id="debit-card-cvv" placeholder="0000">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="debit-card-name"> Nombre en la tarjeta </label>
+                  <input type="text" id="debit-card-name" placeholder="">
+                </div>
+                
+                <button type="button" class="button-secondary" id="debit-card-add">
+                  Añadir
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="payment-method-dropdown">
+            <button class="payment-method-button" type="button">
+              Tarjeta de crédito <i class="ph-bold ph-caret-down"></i>
+            </button>
+
+            <div class="payment-method-block">
+              <form class="payment-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="credit-card-number"> Número de la tarjeta </label>
+                    <input type="text" id="credit-card-number" placeholder="0000 0000 0000 0000">
+                  </div>
+                  <div class="form-group">
+                    <label for="credit-card-expiry"> Fecha de expiración </label>
+                    <input type="text" id="credit-card-expiry" placeholder="MM / AA">
+
+                  </div>
+                  <div class="form-group">
+                    <label for="credit-card-cvv"> CVV / CVC </label>
+                    <input type="text" id="credit-card-cvv" placeholder="0000">
+                  </div>
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="credit-card-name"> Nombre en la tarjeta </label>
+                    <input type="text" id="credit-card-name">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="credit-card-payments"> Cuotas </label>
+                    <input type="text" id="credit-card-payments">
+                  </div>
+                </div>
+
+                <button type="button" class="button-secondary" id="credit-card-add">
+                  Añadir
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="payment-method-dropdown">
+            <button class="payment-method-button" type="button">
+              Transferencia bancaria <i class="ph-bold ph-caret-down"></i>
+            </button>
+
+            <div class="payment-method-block">
+              <form class="payment-form">
+
+                <div class="form-group">
+                  <label for="bank-account-number"> Número de cuenta </label>
+                  <input type="text" id="bank-account-number">
+                </div>
+
+                <div class="form-group">
+                  <label for="bank-account-holder"> Titular de la cuenta </label>
+                  <input type="text" id="bank-account-holder">
+                </div>                
+
+                <button type="button" class="button-secondary" id="bank-account-add">
+                  Añadir
+                </button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+
+        <h4 class="section-subtitle"> Costos </h4>
         <div class="product-description">
           <div class="row-space-between">
             <p> </p>
@@ -52,7 +185,7 @@
           </div>
         </div>
 
-        <button class="button-primary"> Finalizar compra </button>
+        <button class="button-primary"> Comprar </button>
       </div>
     </div>
   </main>

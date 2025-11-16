@@ -3,14 +3,23 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-auto-flow: row;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 0 auto;
+}
+
+.categories-container {
+  gap: 1rem;
 }
 
 /* subtítulo de cada sección del carrito */
 .cart-subtitle {
     padding-bottom: 1rem;
-  }
+}
+
+.section-subtitle {
+    margin: 0;
+    padding-bottom: 0.25rem;
+}
 
 .cart-product-item {
   display: flex;
@@ -36,6 +45,10 @@
 .cart-product-price h4 {
   margin: 0;
   padding: 0;
+}
+
+.product-description {
+  margin-bottom: 1rem;
 }
 
 .cart-product-numbers {
@@ -90,7 +103,7 @@ hr.solid {
 }
 
 
-/* contador de cantidad de un producto*/
+/* contador de cantidad de un producto */
 .cart-product-counter {
   display: flex;
   background-color: var(--color-grey95);
@@ -146,4 +159,123 @@ hr.solid {
     transition: color 0.15s ease-in-out;
     color: var(--color-burningFlame);
   }
+}
+
+/* radio buttons de los envíos */
+.shipping-form input[type="radio"] {
+  margin: 0;
+  margin-right: 0.25rem;
+  cursor: pointer;
+}
+
+/* labels de los radio buttons */
+.shipping-form label {
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+/* modal de pago (ventana popup para seleccionar el método de pago) */
+#modal-payment {
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--color-grey85);
+  margin: 10rem auto auto auto;
+}
+
+/* blur de fondo */
+#modal-payment::backdrop {
+  backdrop-filter: blur(0.25rem);
+}
+
+/* título del modal / "Método de pago" */
+.modal-payment-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+/* dropdown de cada método de pago */
+.payment-method-dropdown {
+  background-color: var(--color-grey95);
+  border-radius: 1rem;
+  padding: 0 1.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* botón que abre los dropdowns de pago */
+.payment-method-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 1rem/1.5 "Inter", sans-serif;
+  background-color: transparent;
+  border: none;
+  gap: 0.25rem;
+  width: 100%;
+  height: 3rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.payment-method-block {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out, padding 0.25s ease-in-out;
+}
+
+.payment-method-block.open {
+  max-height: 500px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 100%;
+}
+
+.payment-form label {
+  font-weight: 700;
+  padding-bottom: 0.25rem;
+}
+
+.payment-form input {
+  font: 400 1rem/1 "Inter", sans-serif;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: 3rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 100%;
+}
+
+.button-secondary {
+  width: fit-content;
+  align-self: center;
 }
