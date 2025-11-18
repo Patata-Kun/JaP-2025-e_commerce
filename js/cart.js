@@ -82,6 +82,14 @@ function updateCartItemPrice(itemElement, product) {
   priceElement.textContent = `${product.currency} ${(product.cost * product.quantity).toLocaleString('es-UY')}`; //CAMBIA EL PRECIO TOTAL, LO MULTIPLICA POR LA CANTIDAD DE ESE PRODUCTO, Y TAMBIÉN LO ADAPTA SEGÚN LA MONEDA.
 }
 
+// NUEVA FUNCIÓN PARA EL ENVÍO
+function getShippingPercentage() {
+  // DEVUELVE EL PORCENTAJE SEGÚN EL RADIO SELECCIONADO
+  if (document.getElementById("premium-shipping").checked) return 15;
+  if (document.getElementById("express-shipping").checked) return 7;
+  return 5; // STANDARD
+}
+
 function updateCartTotal() { //RECUPERO EL CARRITO DESDE localStorage
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   let total = 0;
@@ -96,9 +104,14 @@ function updateCartTotal() { //RECUPERO EL CARRITO DESDE localStorage
   const subtotalElement = document.querySelector(".cart-summary .cart-subtotal:last-child"); 
   const productosElement = document.querySelector(".cart-summary .product-description p:first-child");
 
+  // SUMO EL ENVÍO AL TOTAL
+  const shippingPercent = getShippingPercentage(); // OBTENGO EL %
+  const shippingCost = Math.round(total * (shippingPercent / 100)); // CALCULO EL COSTO
+  
   if (subtotalElement) {
-    subtotalElement.textContent = `UYU ${total.toLocaleString("es-UY")}`; //ACTUALIZA EL TOTAL EN DINERO.
-  }
+  subtotalElement.textContent = `UYU ${(total + shippingCost).toLocaleString("es-UY")}`;
+}
+
 
   if (productosElement) {
     productosElement.textContent = `Productos (${cartTotalQuantity})`; // ACTUALIZA LA CANTIDAD DEL PRODUCTO CUANDO AGREGO O QUITO UNO NUEVO.
@@ -190,6 +203,11 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCart();
   cartModalPaymentSetUp();
   cartModalPaymentShowDetails();
+
+    // ACTUALIZA EL TOTAL CUANDO CAMBIO EL ENVÍO
+  document.querySelectorAll("input[name='shipping']").forEach(radio => {
+    radio.addEventListener("change", updateCartTotal);
+  });
 });
 
 // modal de los métodos de pago
