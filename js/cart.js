@@ -79,7 +79,7 @@ function updateCartQuantity(btn, newQuantity) {
 // MODIFICA EL PRECIO SEGÚN AGREGAMOS O QUITAMOS UN PRODUCTO AL CARRITO
 function updateCartItemPrice(itemElement, product) { 
   const priceElement = itemElement.querySelector(".cart-product-price h4"); //AL PRODUCTO ACTUAL, LE BUSCA EL PRECIO
-  priceElement.textContent = `${product.currency} ${(product.cost * product.quantity).toLocaleString('es-UY')}`; //CAMBIA EL PRECIO TOTAL, LO MULTIPLICA POR LA CANTIDAD DE ESE PRODUCTO, Y TAMBIÉN LO ADAPTA SEGÚN LA MONEDA.
+  priceElement.textContent = `${product.currency} ${(product.cost * product.quantity).toLocaleString('es-UY')}`; //CAMBIA EL PRECIO TOTAL, LO MULTIPLICA POR LA CANTIDAD DE ESE PRODUCTO, Y TAMBIÉN LO ADAPTA SEGÚN LA MONEDA <- seguro?...
 }
 
 // NUEVA FUNCIÓN PARA EL ENVÍO
@@ -87,7 +87,9 @@ function getShippingPercentage() {
   // DEVUELVE EL PORCENTAJE SEGÚN EL RADIO SELECCIONADO
   if (document.getElementById("premium-shipping").checked) return 15;
   if (document.getElementById("express-shipping").checked) return 7;
-  return 5; // STANDARD
+  if (document.getElementById("standard-shipping").checked) return 5; // STANDARD
+
+  else return '0';
 }
 
 function updateCartTotal() { //RECUPERO EL CARRITO DESDE localStorage
