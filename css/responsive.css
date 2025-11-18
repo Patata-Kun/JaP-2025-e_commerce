@@ -30,6 +30,11 @@
     margin-right: 8rem;
     margin-left: 8rem;
   }
+
+  .product-info {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -43,7 +48,7 @@
   .product-image {
     max-width: 100%;
   }
-  
+
 }
 
 @media (max-width: 768px) {
@@ -59,15 +64,6 @@
     margin-bottom: 2rem;
   }
 
-  .title h1{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  
-  .title p {
-    font-size: 0.75rem;
-  }
-  
   .main-content {
     margin-right: 1rem;
     margin-left: 1rem;
@@ -82,13 +78,6 @@
     height: 20px;
 }
 
-  .product-price-sold h4, .product-price p {
-    font-size: 0.5rem;
-  }
-
-  .product-description p {
-    font-size: 0.75rem;
-  }
 }
 
 /* @media (max-width: 1024px) {
@@ -108,10 +97,10 @@
 
 
 /* <- responsive design para la navbar -> */
-@media (max-width: 650px) {
+@media (max-width: 850px) {
   
   .main-content {
-    padding-bottom: 1rem;
+    padding-bottom: 10rem;
   }
   
   .container {
@@ -126,12 +115,13 @@
 
   .navbar-links {
     width: 100%;
+    height: auto;
     flex-direction: column;
     background-color: var(--color-anchorfishBlue);
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 1rem;
+    padding: 1rem 1rem 1.5rem !important;
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
@@ -140,9 +130,9 @@
       width: 100%;
     }
 
-    & li:last-child {
+    /* & li:last-child {
       padding-bottom: 1rem;
-    }
+    } */
 
     & a {
     display: block;
@@ -156,5 +146,38 @@
       opacity: 1;
       visibility: visible;
     }
+  }
+
+  .account-details {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-button {
+    width: 100%;
+    justify-content: center !important;
+    padding: 0.5rem !important;
+    margin: 0 !important;
+  }
+
+  .dropdown-content {
+    position: relative !important;
+    width: 100% !important;
+    margin-top: 0.25rem;
+  }
+
+  .navbar-cart-icon {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .cart-container {
+    grid-template-columns: 1fr !important;
   }
 }

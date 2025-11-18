@@ -76,6 +76,7 @@
   
   p {
     margin: 0;
+    line-height: 1.5rem;
   }
 }
 
@@ -85,12 +86,12 @@
   margin: 0;
 }
 
-hr.solid {
+.solid-separator {
   border: 1px solid var(--color-grey10);
   border-radius: 1rem;
   width: 100%;
 
-  margin: 1.5rem 0 1.5rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
 .cart-product-image {
@@ -101,7 +102,6 @@ hr.solid {
   aspect-ratio: 16 / 9;
   flex-shrink: 0;
 }
-
 
 /* contador de cantidad de un producto */
 .cart-product-counter {
@@ -278,4 +278,8 @@ hr.solid {
 .button-secondary {
   width: fit-content;
   align-self: center;
+}
+
+.cart-total {
+  margin: 0;
 }

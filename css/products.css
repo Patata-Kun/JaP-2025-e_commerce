@@ -30,7 +30,7 @@
 
   max-width: calc(24.6rem * 16/9);
   height: fit-content;
-  overflow-x: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
   box-shadow: var(--box-shadow);
   border-radius: 1rem;
@@ -109,6 +109,7 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  padding-bottom: 0 !important;
 }
 
 /* calificación de un producto - incluye las estrellas, el número de calificaciones y el total de vendidos */
@@ -314,7 +315,7 @@ span {
   width: 100%;
   max-width: 50rem;
   height: 15rem;
-  object-fit: cover;
+  object-fit: contain;
   aspect-ratio: 16 / 9;
   border-radius: 1.5rem;
   background-color: white;

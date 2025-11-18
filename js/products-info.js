@@ -29,7 +29,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderRelatedProducts(productData.relatedProducts, productElements.relatedProductsGrid);
 
     } catch (error) {
-    console.warn('Error loading product info:', error);
+      console.warn("Error loading product info:", error);
+      
+      document.getElementsByClassName("products-container")[0].style.display = "none";
+      document.getElementsByClassName("product-add-review")[0].style.display = "none";
+      document.getElementsByClassName("product-reviews")[1].style.display = "none";
+
+      const errorMessageContainer = document.createElement("div");
+      errorMessageContainer.classList.add("categories-title");
+      const errorMessageTitle = document.createElement("h1");
+      const errorMessageText = document.createElement("p");
+
+      errorMessageTitle.textContent = "Error al cargar la información del producto";
+      errorMessageText.textContent = "Lo sentimos, no se pudo cargar la información del producto en este momento. Por favor, inténtelo de nuevo más tarde.";
+
+      errorMessageContainer.appendChild(errorMessageTitle);
+      errorMessageContainer.appendChild(errorMessageText);
+
+      document.getElementsByClassName("main-content")[0].appendChild(errorMessageContainer);
     }
 
   try {
@@ -43,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     productStars(commentsData, productElements.stars, productElements.stars);
 
     } catch (error) {
-    console.warn('Error loading product comments:', error);
+      console.warn('Error loading product comments:', error);
   }
 
 });

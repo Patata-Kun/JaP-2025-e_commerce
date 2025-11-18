@@ -92,29 +92,40 @@ function getShippingPercentage() {
 
 function updateCartTotal() { //RECUPERO EL CARRITO DESDE localStorage
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  let total = 0;
+  let subtotal = 0;
 
 //RECORRE CADA PRODUCTO DEL CARRITO Y SEGÚN SU CANTIDAD LO MULTIPLICA POR EL PRECIO Y ME DA EL NUEVO PRECIO  
   cart.forEach(item => {
-    total += item.cost * item.quantity;
+    subtotal += item.cost * item.quantity;
   });
   
   const cartTotalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-  const subtotalElement = document.querySelector(".cart-summary .cart-subtotal:last-child"); 
   const productosElement = document.querySelector(".cart-summary .product-description p:first-child");
+  const productsSubtotalElement = document.getElementById("cart-products-display-price");
+  const shippingElement = document.getElementById("cart-shipping-price");
+  const subtotalElement = document.querySelector(".cart-summary .cart-subtotal:last-child"); 
+  const totalElement = document.getElementById("cart-total");
 
   // SUMO EL ENVÍO AL TOTAL
   const shippingPercent = getShippingPercentage(); // OBTENGO EL %
-  const shippingCost = Math.round(total * (shippingPercent / 100)); // CALCULO EL COSTO
+  const shippingCost = Math.round(subtotal * (shippingPercent / 100)); // CALCULO EL COSTO
   
   if (subtotalElement) {
-  subtotalElement.textContent = `UYU ${(total + shippingCost).toLocaleString("es-UY")}`;
+    subtotalElement.textContent = `UYU ${(subtotal).toLocaleString("es-UY")}`;
+    productsSubtotalElement.textContent = `UYU ${(subtotal).toLocaleString("es-UY")}`;
 }
-
 
   if (productosElement) {
     productosElement.textContent = `Productos (${cartTotalQuantity})`; // ACTUALIZA LA CANTIDAD DEL PRODUCTO CUANDO AGREGO O QUITO UNO NUEVO.
+  }
+
+  if (totalElement) {
+    totalElement.textContent = `UYU ${(subtotal + shippingCost).toLocaleString("es-UY")}`;
+  }
+
+  if (shippingElement) {
+    shippingElement.textContent = `UYU ${shippingCost.toLocaleString("es-UY")}`;
   }
 }
 
@@ -239,18 +250,18 @@ function cartModalPaymentSetUp() {
   const paymentDropdowns = document.querySelectorAll(".payment-method-dropdown");
   
   paymentDropdowns.forEach(dropdown => {
-    const button = dropdown.querySelector(".payment-method-button");
-    const block = dropdown.querySelector(".payment-method-block");
+    const addButton = dropdown.querySelector(".payment-method-button");
+    const paymentBlock = dropdown.querySelector(".payment-method-block");
     
-    button.addEventListener('click', () => {
+    addButton.addEventListener('click', () => {
       paymentDropdowns.forEach(otherDropdown => {
         if (otherDropdown !== dropdown) {
-          const otherBlock = otherDropdown.querySelector(".payment-method-block");
-          otherBlock.classList.remove("open");
+          const otherPaymentBlock = otherDropdown.querySelector(".payment-method-block");
+          otherPaymentBlock.classList.remove("open");
         }
       });
 
-      block.classList.toggle("open");
+      paymentBlock.classList.toggle("open");
     });
   });
 
@@ -293,7 +304,6 @@ function cartModalPaymentShowDetails() {
     }
   ];
 
-  // Función reutilizable para mostrar detalles
   function showPaymentDetails(title, name, number, payments) {
     paymentDetailsDisplay.title.style.display = "block";
     paymentDetailsDisplay.details.style.display = "block";
@@ -303,15 +313,17 @@ function cartModalPaymentShowDetails() {
       : `${name} — ${number.slice(-4)} — ${payments} cuotas`;
   }
 
-  // Agregar event listeners para cada método de pago
   paymentConfig.forEach(config => {
-    const button = document.getElementById(config.buttonId);
-    if (button) {
-      button.addEventListener("click", () => {
+    const addButton = document.getElementById(config.buttonId);
+    if (addButton) {
+      addButton.addEventListener("click", () => {
         const name = document.getElementById(config.nameId).value;
         const number = document.getElementById(config.numberId).value;
         const payments = config.paymentsId ? document.getElementById(config.paymentsId).value : "";
         showPaymentDetails(config.title, name, number, payments);
+
+        const modalPayment = document.getElementById("modal-payment");
+        modalPayment.close();
       });
     }
   });
