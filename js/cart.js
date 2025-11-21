@@ -330,3 +330,54 @@ function cartModalPaymentShowDetails() {
     }
   });
 };
+
+
+// PARA AUTORIZAR O NO LA COMPRA SEGÚN SI LA INFO CORRESPONDIENTE A LA DIRECCIÓN FUE CARGADO O NO AL PERFIL DE USUARIO.
+const finishBoton = document.getElementsByClassName("button-primary")[0];
+
+if (finishBoton) { // comprueba que el botón exista antes de agregar el listener
+  finishBoton.addEventListener("click", () => { //LE DOY UNA FUNCIÓN AL HACER CLICK EN EL BOTÓN.
+
+    const storedPersonalInfo = localStorage.getItem("personalInfo"); //OBTENGO LA INFO PERSONAL (DIRECCIÓN GUARDADA EN EL PERFIL DEL USUARIO) DESDE localSTORAGE.  
+
+    if (!storedPersonalInfo) { // SI LA INFO NO ESTÁ GUARDADA EN EL PERFIL, ME DEVUELVE EL MENSAJE DE ERROR Y NO ME PERMITE SEGUIR LA COMPRA.
+      showFeedback("😢 No has cargado tu dirección en Mi cuenta.");
+      return;
+    }
+
+    const infoAddress = JSON.parse(storedPersonalInfo); // ACÁ SE CREA LA VARIANTE infoAddress. Y LA INFORMACIÓN (TEXTO) GUARDADA EN localSTORAGE SE TRANSFORMA EN UN OBJETO.
+
+    //VERIFICA SI LOS CAMPOS PARA CALLE, APARTAMENTO Y CIUDAD HAN SIDO RELLENADOS EN EL PERFIL.
+    if (
+      !infoAddress.street || infoAddress.street.trim() === "" || //
+      !infoAddress.apartment || infoAddress.apartment.trim() === "" ||
+      !infoAddress.city || infoAddress.city.trim() === ""
+    ) {
+      showFeedback("😢 Debes completar tu dirección antes de finalizar la compra."); // EN CASO DE QUE LA INFO NO HAYA SIDO COMPLETADA EN EL PERFIL, DEVUELVE EL MENSAJE DE ERROR E IMPIDE LA CONTINUACIÓN DE LA COMPRA.
+      return;
+    }
+
+    //PARA ESTABLECER QUE UN MÉTODO DE PAGO SEA UN REQUISITO PARA REALIZAR LA COMPRA. 
+    const paymentTitle = document.getElementById("payment-method-display");
+
+    if (!paymentTitle || paymentTitle.style.display === "none") {
+      showFeedback("😢 Debes seleccionar un método de pago."); //SI NO ELEGÍ EL MÉTODO DE PAGO, ENTONCES ME DEVUELVE UN MENSAJE DE ERROR.
+      return;
+    }
+
+    showFeedback("😊 Compra finalizada con éxito."); //SI YA SE HA ELEGIDO EL MÉTODO DE PAGO, ENTONCES ME DEVUELVE MENSAJE DE ÉXITO.
+  });
+}
+
+//FUNCIÓN PARA PODER MOSTRAR EL MENSAJE DE ÉXITO O ERROR EN PANTALLA.
+function showFeedback(message) {
+  let feedback = document.getElementById("feedback");
+
+  if (!feedback) { //CREA UN MENSAJE EN PANTALLA.
+    feedback = document.createElement("p"); //CREA UNA <p>
+    feedback.id = "feedback"; //LE DA UNA id.
+    document.querySelector(".cart-summary").appendChild(feedback); //VA HASTA DONDE ESTÁ EL CONTENEDOR CON LA CLASE ".cart-summary" Y COLOCA AL feedback DENTRO DE ESTE CONTENEDOR.
+    }
+
+  feedback.textContent = message; //TOMA EL MENSAJE Y LO PONE EN EL PÁRRAFO QUE APARECERÁ EN PANTALLA CON EL MENSAJE DE ÉXITO O ERROR.
+}
