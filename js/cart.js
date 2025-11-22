@@ -7,7 +7,7 @@ fetch(USDValueUYU)
     localStorage.setItem("USDValue", data.venta);
   })
   .catch(error => {
-    console.error("Error al obtener el valor del dólar:", error);
+    console.error("Error obtaining dollar price:", error);
   });
 
 function validateNumberInput(input) {

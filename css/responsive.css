@@ -180,4 +180,8 @@
   .cart-container {
     grid-template-columns: 1fr !important;
   }
+
+  #modal-payment {
+    margin: 3rem auto auto auto !important;
+  }
 }
