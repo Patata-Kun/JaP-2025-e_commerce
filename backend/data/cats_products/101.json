@@ -1,0 +1,76 @@
+{
+  "catID": 101,
+  "catName": "Automóviles",
+  "products": [
+    {
+      "id": 10001,
+      "name": "BYD Seagull GS",
+      "description": [
+        "-> e-Platform 3.0.",
+        "-> Batería Blade ultra segura con una autonomía de hasta 380 km (según el NEDC).",
+        "-> Hasta 6 airbags."
+      ],
+      "cost": 19990,
+      "currency": "USD",
+      "image":"https://byd.com.uy/wp-content/uploads/2024/01/portada_bydseagull.png",
+      "icon-car-type":"car",
+      "soldCount": 77
+    },
+    {
+      "id": 10002,
+      "name": "BYD Yuan Pro",
+      "description": [
+        "-> e-Platform 3.0.",
+        "-> Batería Blade ultra segura con tecnología Cell To Body (CBT). Autonomía de hasta 380 km (según el NEDC).",
+        "-> 100% eléctrico."
+      ],
+      "cost": 27990,
+      "currency": "USD",
+      "image": "https://byd.com.uy/wp-content/uploads/2024/08/yuanpro_dest.png",
+      "icon-car-type": "suv",
+      "soldCount": 48
+    },
+    {
+      "id": 10003,
+      "name": "BYD Seal",
+      "description": [
+        "-> e-Platform 3.0.",
+        "-> Batería Blade ultra segura con tecnología Cell To Body (CBT). Autonomía de hasta 520 km (según versión).",
+        "-> Sistema Intelligent Torque Adaptation Control (ITAC) (en versión all-wheel drive)."
+      ],
+      "cost": 50990,
+      "currency": "USD",
+      "image": "https://byd.com.uy/wp-content/uploads/2024/01/seal_dest.jpg",
+      "icon-car-type": "car",
+      "soldCount": 33
+    },
+    {
+      "id": 10004,
+      "name": "BYD Sealion",
+      "description": [
+        "-> VEHICLE-TO-LOAD (VTOL).",
+        "-> Batería Blade ultra segura con tecnología Cell To Body (CBT). Autonomía de hasta 456 km (según WLTC).",
+        "-> Sonido Hi-Fi de 12 altavoces."
+      ],
+      "cost": 56990,
+      "currency": "USD",
+      "image": "https://byd.com.uy/wp-content/uploads/2025/02/SEALION_img_dest.webp",
+      "icon-car-type": "suv",
+      "soldCount": 25
+    },
+    {
+      "id": 10005,
+      "name": "BYD Tang",
+      "description": [
+        "-> All-wheel drive (AWD).",
+        "-> Batería Blade ultra segura con una autonomía de hasta 530 km (según WLTC).",
+        "-> Suspensión inteligente con sistema DiSus-C."
+      ],
+      "cost": 80990,
+      "currency": "USD",
+      "image": "https://byd.com.uy/wp-content/uploads/2024/05/dest_newtang_grey.jpg",
+      "icon-car-type": "suv",
+      "soldCount": 12
+    }
+  ]
+}

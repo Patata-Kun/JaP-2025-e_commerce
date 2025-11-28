@@ -1,0 +1,23 @@
+[
+  {
+    "product": 50003,
+    "score": 5,
+    "description": "Amo el dramatismo de poder cortar mis llamadas cerrando el celular y revivir el 2007",
+    "user": "Jazmín H",
+    "dateTime": "13/09/25 13:06:09"
+  },
+  {
+    "product": 50003,
+    "score": 4,
+    "description": "Casi todo bien, excepto por algún detalle de gusto personal",
+    "user": "Maria Sánchez",
+    "dateTime": "25/07/25 16:15:03"
+  },
+  {
+    "product": 50003,
+    "score": 5,
+    "description": "Me encanta cortar las llamadas cerrando la tapita me recuerda a cuando era joven.",
+    "user": "Juan_Pedro",
+    "dateTime": "17/07/25 18:03:52"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "catID": 108,
+  "catName": "Deporte",
+ "products": [
+    {
+      "id": 80001,
+      "name": "Pelota ADIDAS Jabulani",
+      "description": "Balón oficial de la Copa del Mundo de la FIFA 2010.",
+      "cost": 4000,
+      "currency": "UYU",
+      "soldCount": 72,
+      "image": "../img/px/prod80001_1.jpg"
+    },
+    {
+      "id": 80002,
+      "name": "Pelota de basketball NBA DRV - Nº 7",
+      "description": "Diseñado para máximo rendimiento en superficies exteriores. Cuenta con una cámara de alto nivel para mayor retención de aire y mantener la esfericidad del balón por más tiempo.",
+      "cost": 2500,
+      "currency": "UYU",
+      "image": "../img/px/prod80002_1.jpg",
+      "soldCount": 59
+    },
+    {
+      "id": 80003,
+      "name": "Colchoneta De Yoga ADIDAS 7mm",
+      "description": "Diseñada para el ejercicio físico en general. Fácil de lavar y limpiar. Diseño ligero enrollado ajustado para transporte y almacenamiento.",
+      "cost": 400,
+      "currency": "UYU",
+      "image": "../img/px/prod80003_1.jpg",
+      "soldCount": 110
+    },
+    {
+      "id": 80004,
+      "name": "Pala de pádel para adulto Kuikma Power Metal",
+      "description": "Perfecto para jugadores expertos que buscan el mejor equilibrio entre la potencia y la salida de la pelota, gracias a su forma de diamante y el núcleo blando. Con un peso medio de 365 g y un equilibrio en la cabeza de la pala, su espuma EVA Soft, la tecnología METAL BIAXIAL CORE y el SBS te proporcionarán un toque de pelota con potencia y comodidad.",
+      "cost": 4000,
+      "currency": "UYU",
+      "image": "../img/px/prod80004_1.jpg",
+      "soldCount": 22
+    },
+    {
+      "id": 80005,
+      "name": "Camiseta de Peñarol Negra Alternativa 2025",
+      "description": "No hay mucho que decir, es lo mas hermoso del planeta",
+      "cost": 4000,
+      "currency": "UYU",
+      "image": "../img/px/prod80005_1.jpg",
+      "soldCount": 1530
+    },
+    {
+      "id": 80006,
+      "name": "Camiseta de Nacional Azul Alternativa 2025",
+      "description": "Hay que contentar a todo el mundo.",
+      "cost": 4000,
+      "currency": "UYU",
+      "image": "../img/px/prod80006_1.jpg",
+      "soldCount": 952
+    }
+
+
+  ]
+}

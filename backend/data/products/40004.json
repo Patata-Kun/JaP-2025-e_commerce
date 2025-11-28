@@ -1,0 +1,37 @@
+{
+  "id": 40004,
+  "name": "Escalera de Acero de Carbono Plegable",
+  "description": "Ideal para la limpieza de placares, alacenas y ventanas en habitaciones de cualquier altura. Su diseño portátil y plegable permite ahorrar espacio permitiendo un fácil almacenamiento y transporte, siendo apta tanto para interiores como exteriores. Fabricada con un resistente marco de acero de carbono, es liviana, duradera y fácil de trasladar, con patas antideslizantes que aumentan la seguridad y protegen el suelo.",
+  "cost": 2500,
+  "currency": "UYU",
+  "soldCount": 37,
+  "category": "Herramientas",
+  "images": [
+      "../img/px/prod40004_1.webp",
+      "../img/px/prod40004_2.webp",
+      "../img/px/prod40004_3.webp"
+  ],
+  "relatedProducts": [
+    {
+          "id":40001,
+          "name":"Lustra Pulidora BLACK DECKER",
+          "cost": 10000,
+          "currency": "UYU",
+          "image": "../img/px/prod40001_1.webp"
+      },
+    {
+          "id":40002,
+          "name":"Hidrolavadora NAPPO",
+          "cost": 1200,
+          "currency": "UYU",
+          "image": "../img/px/prod40002_1.webp"
+      },
+      {
+          "id":40005,
+          "name":"Motosierra NAPPO a Nafta",
+          "cost": 2500,
+          "currency": "UYU",
+          "image": "../img/px/prod40005_1.webp"
+      }
+  ]
+}

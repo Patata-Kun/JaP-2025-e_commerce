@@ -1,0 +1,37 @@
+{
+  "id": 40006,
+  "name": "Taladro de Impacto Inalámbrico NAPPO",
+  "description": "Ideal para trabajos de bricolaje. Batería recargable de 1500mAh. Torque máximo de 25Nm. Capacidad de perforación de 10mm.cuenta con 2 velocidades de 350/1350rpm, 6 mechas, 6 puntas de destornillador, un extensor recto, cargador y un práctico maletín de transporte.",
+  "cost": 2000,
+  "currency": "UYU",
+  "soldCount": 79,
+  "category": "Herramientas",
+  "images": [
+      "../img/px/prod40006_1.webp",
+      "../img/px/prod40006_2.webp",
+      "../img/px/prod40006_3.webp"
+  ],
+  "relatedProducts": [
+    {
+          "id":40001,
+          "name":"Lustra Pulidora BLACK DECKER",
+          "cost": 10000,
+          "currency": "UYU",
+          "image": "../img/px/prod40001_1.webp"
+      },
+      {
+          "id":40003,
+          "name":"Cortadora de Césped NAPPO",
+          "cost": 4500,
+          "currency": "UYU",
+          "image": "../img/px/prod40003_1.webp"
+      },
+      {
+          "id":40004,
+          "name":"Escalera de Acero de Carbono Plegable",
+          "cost": 2500,
+          "currency": "UYU",
+          "image": "../img/px/prod40004_1.webp"
+      }
+  ]
+}

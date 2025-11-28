@@ -1,0 +1,37 @@
+{
+  "id": 70005,
+  "name": "Lavavajilla PANAVOX WQP8 Silver",
+  "description": "Capacidad: 8 cubiertos. 6 programas disponibles. Color: Plateado. Consumo: 1380 W.",
+  "cost": 12000,
+  "currency": "UYU",
+  "soldCount": 25,
+  "category": "Electrodomésticos",
+  "images": [
+      "../img/px/prod70005_1.jpg",
+      "../img/px/prod70005_2.jpg",
+      "../img/px/prod70005_3.jpg"
+  ],
+  "relatedProducts": [
+    {
+          "id":70001,
+          "name":"Lavarropas JAMES LR 1006 G3/G4",
+          "cost": 10000,
+          "currency": "UYU",
+          "image": "../img/px/prod70001_1.jpg"
+      },
+      {
+          "id":70003,
+          "name":"Refrigerador PANAVOX RFS-54 INV N",
+          "cost": 20000,
+          "currency": "UYU",
+          "image": "../img/px/prod70003_1.webp"
+      },
+      {
+          "id":70006,
+          "name":"AyrFryer Phillips Serie 1000",
+          "cost": 3500,
+          "currency": "UYU",
+          "image": "../img/px/prod70006_1.jpg"
+      }
+  ]
+}

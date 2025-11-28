@@ -1,0 +1,37 @@
+{
+  "id": 70006,
+  "name": "AyrFryer Phillips Serie 1000",
+  "description": "Alimentación 1500 W. Voltaje 220 - 240V. Frecuencia 50-60 Hz.",
+  "cost": 3500,
+  "currency": "UYU",
+  "soldCount": 42,
+  "category": "Electrodomésticos",
+  "images": [
+      "../img/px/prod70006_1.webp",
+      "../img/px/prod70006_2.webp",
+      "../img/px/prod70006_3.webp"
+  ],
+  "relatedProducts": [
+    {
+          "id":70002,
+          "name":"Microondas PANAVOX",
+          "cost": 4000,
+          "currency": "UYU",
+          "image": "../img/px/prod70002_1.jpg"
+      },
+      {
+          "id":70003,
+          "name":"Refrigerador PANAVOX RFS-54 INV N",
+          "cost": 20000,
+          "currency": "UYU",
+          "image": "../img/px/prod70003_1.webp"
+      },
+      {
+          "id":70005,
+          "name":"Lavavajilla PANAVOX WQP8 Silver",
+          "cost": 12000,
+          "currency": "UYU",
+          "image": "../img/px/prod70005_1.jpg"
+      }
+  ]
+}

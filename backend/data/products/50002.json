@@ -1,0 +1,50 @@
+{
+  "id": 50002,
+  "name": "MacBook Pro M4 – 14\" ",
+  "category": "Tecnología",
+  "description": [
+    "Pantalla -> Liquid Retina XDR de 14\".",
+    "Procesador -> Apple M4 Pro. 12 núcleos de CPU, 16 núcleos de GPU.",
+    "Memoria -> 24 GB.",
+    "Batería: 72,4 Wh.",
+    "Almacenamiento -> 512 GB.",
+    "Puertos -> 1 puerto MagSafe 3, 3 puertos Thunderbolt 5, 1 puerto HDMI 2.1, ranura para tarjetas SDXC, entrada de 3,5 mm para auriculares,",
+    "Peso -> 1,60 kg."
+  ],
+  "cost": 1999,
+  "currency": "USD",
+  "soldCount": 8,
+  "images": [
+    "../img/px/prod50002_1.jpg",
+    "../img/px/prod50002_2.jpg",
+    "../img/px/prod50002_3.jpg",
+    "../img/px/prod50002_4.jpg"
+  ],
+  "relatedProducts": [
+    {
+      "id": 50003,
+      "name": "Samsung Galaxy ZFlip7",
+      "cost": 1149,
+      "currency": "USD",
+      "image": "../img/px/prod50003_1.jpg"
+    },
+    {
+      "id": 50001,
+      "name": "PC de escritorio",
+      "cost": 2599,
+      "currency": "USD",
+      "image": "../img/px/prod50001_1.jpg"
+    },
+    {
+      "id": 50006,
+      "name": "Samsung Galaxy XR",
+      "cost": 1799,
+      "currency": "USD",
+      "image": "../img/px/prod50006_1.jpg"
+    }
+  ],
+  "color": [
+    "Space Black",
+    "Silver"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": 80006,
+  "name": "Camiseta de Nacional Azul Alternativa 2025",
+  "description": "Hay que contentar a todo el mundo.",
+  "cost": 4000,
+  "currency": "UYU",
+  "soldCount": 952,
+  "category": "Deporte",
+  "images": [
+      "../img/px/prod80006_1.jpg",
+      "../img/px/prod80006_2.jpg"
+  ],
+  "relatedProducts": [
+    {
+          "id":80001,
+          "name":"Pelota ADIDAS Jabulani",
+          "cost": 4000,
+          "currency": "UYU",
+          "image": "../img/px/prod80001_1.jpg"
+      },
+    {
+          "id":80002,
+          "name":"Pelota de basketball NBA DRV - Nº 7",
+          "cost": 2500,
+          "currency": "UYU",
+          "image": "../img/px/prod80002_1.jpg"
+      },
+      {
+          "id":80005,
+          "name":"Camiseta de Peñarol Negra Alternativa 2025",
+          "cost": 4000,
+          "currency": "UYU",
+          "image": "img/px/prod80005_2.jpg"
+      }
+  ]
+}

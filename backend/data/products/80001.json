@@ -1,0 +1,36 @@
+{
+  "id": 80001,
+  "name": "Pelota ADIDAS Jabulani",
+  "description": "Balón oficial de la Copa del Mundo de la FIFA 2010.",
+  "cost": 4000,
+  "currency": "UYU",
+  "soldCount": 72,
+  "category": "Deporte",
+  "images": [
+      "../img/px/prod80001_1.jpg",
+      "../img/px/prod80001_2.jpg"
+  ],
+  "relatedProducts": [
+    {
+          "id":80002,
+          "name":"Pelota Basketball N°7 Nba Drv",
+          "cost": 2500,
+          "currency": "UYU",
+          "image": "../img/px/prod80002_1.jpg"
+      },
+      {
+          "id":80003,
+          "name":"Colchoneta De Yoga ADIDAS 7mm",
+          "cost": 400,
+          "currency": "UYU",
+          "image": "../img/px/prod80003_1.jpg"
+      },
+      {
+          "id":80004,
+          "name":"Pala de pádel para adulto Kuikma Power Metal",
+          "cost": 4000,
+          "currency": "UYU",
+          "image": "../img/px/prod80004_1.jpg"
+      }
+  ]
+}

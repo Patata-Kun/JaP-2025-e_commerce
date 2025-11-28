@@ -1,0 +1,31 @@
+{ 
+  "id": 10001,
+  "name": "BYD Seagull GS",
+  "category": "Automóviles",
+  "description": [
+      "Peso -> 1245 kg.",
+      "Autonomía -> 380 km.",
+      "Tiempo de carga -> 6,9h de 30 a 80% (AC).",
+      "Airbags -> 6 (conductor, acompañante y de cortina)",
+      "Asientos -> el asiento del conductor tiene ajuste eléctrico.",
+      "Timón -> con ajuste de altura y profundidad.",
+      "Cargador inalámbrico -> si."
+  ],
+  "cost":21990,
+  "currency": "USD",
+  "soldCount": 77,
+  "icon-car-type": "car",
+  "images": [
+    "https://www.byd.com/content/dam/byd-site/co/product/seagull/pc/2-banner.jpg",
+    "https://www.byd.com/content/dam/byd-site/co/order/seagull/pc/Orderside-Apricitywhite.jpg",
+    "https://www.byd.com/content/dam/byd-site/co/order/seagull/pc/Orderside-SproutGreen.jpg",
+    "https://www.byd.com/content/dam/byd-site/co/order/seagull/pc/Orderside-PolarNightBlack.jpg",
+    "https://www.byd.com/content/dam/byd-site/co/order/seagull/pc/Orderside-Peachpink.jpg"
+  ],
+  "color": [
+    "Apricity white",
+    "Sprout green",
+    "Polar night black",
+    "Peach pink"
+  ]
+}

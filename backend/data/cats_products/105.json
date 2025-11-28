@@ -1,0 +1,60 @@
+{
+  "catID": 105,
+  "catName": "Tecnología",
+  "products": [
+    {
+      "id": 50001,
+      "name": "PC de escritorio",
+      "description": "Computadora de escritorio. Sobria, elegante y potente. Perfecta para una larga sesión de videojuegos o trabajo.",
+      "cost": 2599,
+      "currency": "USD",
+      "soldCount": 11,
+      "image": "../img/px/prod50001_1.jpg"
+    },
+    {
+      "id": 50002,
+      "name": "MacBook Pro M4 - 14\"",
+      "description": "Diseñado para Apple Intelligence. La nueva MacBook Pro incorpora la gama más avanzada de chips que se han creado nunca para un portátil profesional, los Apple M4.",
+      "cost": 1999,
+      "currency": "USD",
+      "image": "../img/px/prod50002_1.jpg",
+      "soldCount": 5
+    },
+    {
+      "id": 50003,
+      "name": "Samsung Galaxy ZFlip7",
+      "description": "Presentamos el Galaxy Z Flip más delgado y avanzado: belleza y rendimiento sin igual que se adapta a tu estilo de vida y a tu bolsillo perfectamente. La pantalla de la cubierta ampliada es sensacional de principio a fin y está incorporada a una estructura duradera más delgada, tanto plegada como desplegada.",
+      "cost": 1149,
+      "currency": "USD",
+      "image": "../img/px/prod50003_1.jpg",
+      "soldCount": 8
+    },
+    {
+      "id": 50004,
+      "name": "Tocadiscos Audio-Technica AT-LP60X",
+      "description": "Tanto si acaba de llegar al mundo del vinilo, está redescubriendo una colección de discos olvidada durante años o simplemente desea incorporar un tocadiscos para completar su sistema, el tocadiscos de transmisión por correa totalmente automático AT-LP60X es una opción excelente.",
+      "cost": 219,
+      "currency": "USD",
+      "image": "../img/px/prod50004_1.jpg",
+      "soldCount": 5
+    },
+    {
+      "id": 50005,
+      "name": "PlayStation 5 Slim Standard – 1 TB",
+      "description": "Explora las increíbles posibilidades de juego con la consola PlayStation®5, que supera lo extraordinario.",
+      "cost": 859,
+      "currency": "USD",
+      "soldCount": 16,
+      "image": "../img/px/prod50005_1.jpg"
+    },
+    {
+      "id": 50006,
+      "name": "Samsung Galaxy XR",
+      "description": "Un mundo sin límites. Galaxy XR abre nuevas realidades de entretenimiento inmersivo, seleccionadas de forma inteligente solo para ti. Ve, trabaja y juega con la IA a tu lado.",
+      "cost": 1799,
+      "currency": "USD",
+      "soldCount": 1,
+      "image": "../img/px/prod50006_1.jpg"
+    }
+  ]
+}

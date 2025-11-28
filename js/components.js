@@ -1,13 +1,13 @@
 // init de las constantes necesarias para la API (llamadas a la API)
-const categoriesURL = "https://patata-kun.github.io/e-mercado-API/cats/cat.json"
+const categoriesURL = "http://localhost:3000/api/cats/cat.json"
 
-const productsURL = "https://patata-kun.github.io/e-mercado-API/cats_products/"
-const productInfoURL = "https://patata-kun.github.io/e-mercado-API/products/"
-const productCommentsURL = "https://patata-kun.github.io/e-mercado-API/products_comments/"
-const publishProductURL  = "https://patata-kun.github.io/e-mercado-API/sell/publish.json"
+const productsURL = "http://localhost:3000/api/cats_products/"
+const productInfoURL = "http://localhost:3000/api/products/"
+const productCommentsURL = "http://localhost:3000/api/products_comments/"
+const publishProductURL  = "http://localhost:3000/api/sell/publish.json"
 
-const cartInfoURL = "https://patata-kun.github.io/e-mercado-API/user_cart/"
-const cartBuyURL = "https://patata-kun.github.io/e-mercado-API/cart/buy.json"
+const cartInfoURL = "http://localhost:3000/api/user_cart/"
+const cartBuyURL = "http://localhost:3000/api/cart/buy.json"
 
 
 // detecta si estamos en la carpeta raíz o en una subcarpeta

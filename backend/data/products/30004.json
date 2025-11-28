@@ -1,0 +1,37 @@
+{
+  "id": 30004,
+  "name": "Mesa de Centro",
+  "description": "Añade más funciones a tu sala de estar, ya que te permite cambiar fácilmente de actividad.",
+  "cost": 10000,
+  "currency": "UYU",
+  "soldCount": 37,
+  "category": "Muebles",
+  "images": [
+      "../img/px/prod30004_1.jpg",
+      "../img/px/prod30004_2.jpg",
+      "../img/px/prod30004_3.jpg"
+  ],
+  "relatedProducts": [
+    {
+          "id":30001,
+          "name":"Juego de Comedor",
+          "cost": 4000,
+          "currency": "UYU",
+          "image": "../img/px/prod30001_1"
+      },
+    {
+          "id":30002,
+          "name":"Sofá",
+          "cost": 24000,
+          "currency": "UYU",
+          "image": "../img/px/prod30002_1.jpg"
+      },
+      {
+          "id":30003,
+          "name":"Armario",
+          "cost": 8000,
+          "currency": "UYU",
+          "image": "../img/px/prod30003_1.jpg"
+      }
+  ]
+}

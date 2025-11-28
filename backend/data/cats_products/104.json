@@ -1,0 +1,60 @@
+{
+    "catID": 104,
+    "catName": "Herramientas",
+    "products": [
+{
+      "id": 40001,
+      "name": "Lustra Pulidora BLACK DECKER",
+      "description": "Pulidora y lijadora Black Decker. Potencia de 1300W. La velocidad variable de 1000 a 3000 RPM.",
+      "cost": 10000,
+      "currency": "UYU",
+      "soldCount": 9,
+      "image": "../img/px/prod40001_1.webp"
+    },
+{
+      "id": 40002,
+      "name": "Hidrolavadora NAPPO",
+      "description": "Ideal para lavar automóviles, botes, patios, entrada de vehículos. Batería de 1300mAh. Presión de trabajo máxima de 430PSI.",
+      "cost": 1200,
+      "currency": "UYU",
+      "image": "../img/px/prod40002_1.webp",
+      "soldCount": 21
+    },
+{
+      "id": 40003,
+      "name": "Cortadora de Césped NAPPO",
+      "description": "Diámetro de corte de 32cm. Incluye una práctica bolsa de recolección de 25L, lo que te permite trabajar de manera más eficiente sin dejar rastro de hierba cortada. Sus 3 niveles de altura de corte ajustables (25, 40, 55mm) te darán la posibilidad de adaptar el corte a tus necesidades y preferencias.",
+      "cost": 4500,
+      "currency": "UYU",
+      "image": "../img/px/prod40003_1.webp",
+      "soldCount": 18
+    },
+{
+      "id": 40004,
+      "name": "Escalera de Acero de Carbono Plegable",
+      "description": "Ideal para la limpieza de placares, alacenas y ventanas en habitaciones de cualquier altura. Su diseño portátil y plegable permite ahorrar espacio permitiendo un fácil almacenamiento y transporte, siendo apta tanto para interiores como exteriores. Fabricada con un resistente marco de acero de carbono, es liviana, duradera y fácil de trasladar, con patas antideslizantes que aumentan la seguridad y protegen el suelo.",
+      "cost": 2500,
+      "currency": "UYU",
+      "image": "../img/px/prod40004_1.webp",
+      "soldCount": 37
+    },
+{
+      "id": 40005,
+      "name": "Motosierra NAPPO a Nafta",
+      "description": "Tiene una potencia de 2200W y arranque fácil para un desempeño sin problemas. Su velocidad máxima es de 11500RPM mientras que la velocidad de giro es de 3300RPM. Cuenta con 550ml de capacidad de combustible y 260ml de aceite.",
+      "cost": 2500,
+      "currency": "UYU",
+      "image": "../img/px/prod40005_1.webp",
+      "soldCount": 29
+    },
+{
+      "id": 40006,
+      "name": "Taladro de Impacto Inalámbrico NAPPO",
+      "description": "Ideal para trabajos de bricolaje. Batería recargable de 1500mAh. Torque máximo de 25Nm. Capacidad de perforación de 10mm.cuenta con 2 velocidades de 350/1350rpm, 6 mechas, 6 puntas de destornillador, un extensor recto, cargador y un práctico maletín de transporte.",
+      "cost": 2000,
+      "currency": "UYU",
+      "image": "../img/px/prod40006_1.webp",
+      "soldCount": 79
+    }   
+  ]
+}

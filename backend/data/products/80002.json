@@ -1,0 +1,36 @@
+{
+  "id": 80002,
+  "name": "Pelota de basketball NBA DRV - Nº 7",
+  "description": "Diseñado para máximo rendimiento en superficies exteriores. Cuenta con una cámara de alto nivel para mayor retención de aire y mantener la esfericidad del balón por más tiempo.",
+  "cost": 2500,
+  "currency": "UYU",
+  "soldCount": 59,
+  "category": "Deporte",
+  "images": [
+      "../img/px/prod80002_1.jpg",
+      "../img/px/prod80002_2.jpg"
+  ],
+  "relatedProducts": [
+    {
+          "id":80001,
+          "name":"Pelota ADIDAS Jabulani",
+          "cost": 4000,
+          "currency": "UYU",
+          "image": "../img/px/prod80001_1.jpg"
+      },
+      {
+          "id":80003,
+          "name":"Colchoneta De Yoga ADIDAS 7mm",
+          "cost": 400,
+          "currency": "UYU",
+          "image": "../img/px/prod80003_1.jpg"
+      },
+      {
+          "id":80004,
+          "name":"Pala de pádel para adulto Kuikma Power Metal",
+          "cost": 4000,
+          "currency": "UYU",
+          "image": "../img/px/prod80004_1.jpg"
+      }
+  ]
+}

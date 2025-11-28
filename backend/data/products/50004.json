@@ -1,0 +1,46 @@
+{
+  "id": 50004,
+  "name": "Tocadiscos Audio-Technica AT-LP60X",
+  "category": "Tecnología",
+  "description": "Tanto si acaba de llegar al mundo del vinilo, está redescubriendo una colección de discos olvidada durante años o simplemente desea incorporar un tocadiscos para completar su sistema, el tocadiscos de transmisión por correa totalmente automático AT-LP60X es una opción excelente. Asequible y fácil de utilizar, el tocadiscos reproduce discos tanto de 33-1/3 como de 45 rpm y, gracias a su preamplificador fonográfico conmutable incorporado, puede conectarse directamente a su equipo estéreo doméstico, altavoces con alimentación, computadora y otros componentes, tengan o no una entrada fonográfica dedicada.",
+  "cost": 219,
+  "currency": "USD",
+  "soldCount": 1,
+  "images": [
+      "../img/px/prod50004_1.jpg",
+      "../img/px/prod50004_2.jpg",
+      "../img/px/prod50004_3.jpg",
+      "../img/px/prod50004_4.jpg",
+      "../img/px/prod50004_5.jpg",
+      "../img/px/prod50004_6.jpg"
+  ],
+  "relatedProducts": [
+    {
+      "id": 50003,
+      "name": "Samsung Galaxy ZFlip7",
+      "cost": 1149,
+      "currency": "USD",
+      "image": "../img/px/prod50003_1.jpg"
+    },
+    {
+      "id": 50001,
+      "name": "PC de escritorio",
+      "cost": 2599,
+      "currency": "USD",
+      "image": "../img/px/prod50001_1.jpg"
+    },
+    {
+        "id":50005,
+        "name":"PlayStation 5 Slim Standard – 1 TB",
+        "cost": 859,
+        "currency": "USD",
+        "image": "../img/px/prod50005_1.jpg"
+    }
+  ],
+  "color": [
+    "Black",
+    "Gun metal",
+    "Brown",
+    "Red"
+  ]
+}

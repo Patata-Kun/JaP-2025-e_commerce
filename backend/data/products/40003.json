@@ -1,0 +1,37 @@
+{
+  "id": 40003,
+  "name": "Cortadora de Césped NAPPO",
+  "description": "Diámetro de corte de 32cm. Incluye una práctica bolsa de recolección de 25L, lo que te permite trabajar de manera más eficiente sin dejar rastro de hierba cortada. Sus 3 niveles de altura de corte ajustables (25, 40, 55mm) te darán la posibilidad de adaptar el corte a tus necesidades y preferencias.",
+  "cost": 4500,
+  "currency": "UYU",
+  "soldCount": 18,
+  "category": "Herramientas",
+  "images": [
+      "../img/px/prod40003_1.webp",
+      "../img/px/prod40003_2.webp",
+      "../img/px/prod40003_3.webp"
+  ],
+  "relatedProducts": [
+    {
+          "id":40001,
+          "name":"Lustra Pulidora BLACK DECKER",
+          "cost": 10000,
+          "currency": "UYU",
+          "image": "../img/px/prod40001_1.webp"
+      },
+    {
+          "id":40002,
+          "name":"Hidrolavadora NAPPO",
+          "cost": 1200,
+          "currency": "UYU",
+          "image": "../img/px/prod40002_1.webp"
+      },
+      {
+          "id":40005,
+          "name":"Motosierra NAPPO a Nafta",
+          "cost": 2500,
+          "currency": "UYU",
+          "image": "../img/px/prod40005_1.webp"
+      }
+  ]
+}

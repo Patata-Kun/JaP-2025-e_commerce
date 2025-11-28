@@ -1,0 +1,37 @@
+{
+  "id": 40001,
+  "name": "Lustra Pulidora BLACK DECKER",
+  "description": "Pulidora y lijadora Black Decker. Potencia de 1300W. La velocidad variable de 1000 a 3000 RPM.",
+  "cost": 10000,
+  "currency": "UYU",
+  "soldCount": 9,
+  "category": "Herramientas",
+  "images": [
+      "../img/px/prod40001_1.webp",
+      "../img/px/prod40001_2.webp",
+      "../img/px/prod40001_3.webp"
+  ],
+  "relatedProducts": [
+    {
+          "id":40002,
+          "name":"Hidrolavadora NAPPO",
+          "cost": 1200,
+          "currency": "UYU",
+          "image": "../img/px/prod40002_1.webp"
+      },
+      {
+          "id":40005,
+          "name":"Motosierra NAPPO a Nafta",
+          "cost": 2500,
+          "currency": "UYU",
+          "image": "../img/px/prod40005_1.webp"
+      },
+      {
+          "id":40006,
+          "name":"Taladro de Impacto Inalámbrico NAPPO",
+          "cost": 2000,
+          "currency": "UYU",
+          "image": "../img/px/prod40006_1.webp"
+      }
+  ]
+}

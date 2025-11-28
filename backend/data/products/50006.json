@@ -1,0 +1,49 @@
+{
+  "id": 50006,
+  "name": "Samsung Galaxy XR",
+  "category": "Tecnología",
+  "description": [
+    "Pantallas -> 2 pantallas 4K micro-OLED a 90 Hz.",
+    "Cámaras -> 2 cámaras f/2.0 de 6.5 MP.",
+    "CPU -> Snapdragon® XR2+ Gen 2.",
+    "Batería -> 2,5 h de uso multimedia.",
+    "Almacenamiento -> 256 GB.",
+    "Sistema operativo -> Android XR.",
+    "Peso -> 545 g (sin batería)."
+  ],
+  "cost": 1799,
+  "currency": "USD",
+  "soldCount": 1,
+  "images": [
+      "../img/px/prod50006_1.jpg",
+      "../img/px/prod50006_2.jpg",
+      "../img/px/prod50006_3.jpg",
+      "../img/px/prod50006_4.jpg",
+      "../img/px/prod50006_5.jpg",
+      "../img/px/prod50006_6.jpg",
+      "../img/px/prod50006_7.jpg"
+  ],
+  "relatedProducts": [
+    {
+      "id": 50003,
+      "name": "Samsung Galaxy ZFlip7",
+      "cost": 1149,
+      "currency": "USD",
+      "image": "../img/px/prod50003_1.jpg"
+    },
+    {
+      "id": 50001,
+      "name": "PC de escritorio",
+      "cost": 2599,
+      "currency": "USD",
+      "image": "../img/px/prod50001_1.jpg"
+    },
+    {
+        "id":50005,
+        "name":"PlayStation 5 Slim Standard – 1 TB",
+        "cost": 859,
+        "currency": "USD",
+        "image": "../img/px/prod50005_1.jpg"
+    }
+  ]
+}

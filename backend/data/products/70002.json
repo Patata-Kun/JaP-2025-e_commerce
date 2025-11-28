@@ -1,0 +1,36 @@
+{
+  "id": 70002,
+  "name": "Microondas PANAVOX",
+  "description": "Panel de control Digital. Color Negro. Potencia 1000 W - 10 niveles de potencia.",
+  "cost": 4000,
+  "currency": "UYU",
+  "soldCount": 74,
+  "category": "Electrodomésticos",
+  "images": [
+      "../img/px/prod70002_1.jpg",
+      "../img/px/prod70002_2.jpg"
+  ],
+  "relatedProducts": [
+    {
+          "id":70001,
+          "name":"Lavarropas JAMES LR 1006 G3/G4",
+          "cost": 10000,
+          "currency": "UYU",
+          "image": "../img/px/prod70001_1.jpg"
+      },
+      {
+          "id":70003,
+          "name":"Refrigerador PANAVOX RFS-54 INV N",
+          "cost": 20000,
+          "currency": "UYU",
+          "image": "../img/px/prod70003_1.webp"
+      },
+      {
+          "id":70004,
+          "name":"Aire acondicionado PANAVOX 17.000 btu",
+          "cost": 14000,
+          "currency": "UYU",
+          "image": "../img/px/prod70004_1.jpg"
+      }
+  ]
+}

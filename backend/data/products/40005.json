@@ -1,0 +1,37 @@
+{
+  "id": 40005,
+  "name": "Motosierra NAPPO a Nafta",
+  "description": "Tiene una potencia de 2200W y arranque fácil para un desempeño sin problemas. Su velocidad máxima es de 11500RPM mientras que la velocidad de giro es de 3300RPM. Cuenta con 550ml de capacidad de combustible y 260ml de aceite.",
+  "cost": 2500,
+  "currency": "UYU",
+  "soldCount": 29,
+  "category": "Herramientas",
+  "images": [
+      "../img/px/prod40005_1.webp",
+      "../img/px/prod40005_2.webp",
+      "../img/px/prod40005_3.webp"
+  ],
+  "relatedProducts": [
+    {
+          "id":40001,
+          "name":"Lustra Pulidora BLACK DECKER",
+          "cost": 10000,
+          "currency": "UYU",
+          "image": "../img/px/prod40001_1.webp"
+      },
+    {
+          "id":40002,
+          "name":"Hidrolavadora NAPPO",
+          "cost": 1200,
+          "currency": "UYU",
+          "image": "../img/px/prod40002_1.webp"
+      },
+      {
+          "id":40006,
+          "name":"Taladro de Impacto Inalámbrico NAPPO",
+          "cost": 2000,
+          "currency": "UYU",
+          "image": "../img/px/prod40006_1.webp"
+      }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": 70003,
+  "name": "Refrigerador PANAVOX RFS-54 INV N",
+  "description": "Tipo de frío: Seco. Puertas: 2 con temperatura independiente.Sistema: INVERTER.",
+  "cost": 20000,
+  "currency": "UYU",
+  "soldCount": 16,
+  "category": "Electrodomésticos",
+  "images": [
+      "../img/px/prod70003_1.webp",
+      "../img/px/prod70003_2.webp"
+  ],
+  "relatedProducts": [
+    {
+          "id":70001,
+          "name":"Lavarropas JAMES LR 1006 G3/G4",
+          "cost": 10000,
+          "currency": "UYU",
+          "image": "../img/px/prod70001_1.jpg"
+      },
+    {
+          "id":70002,
+          "name":"Microondas PANAVOX",
+          "cost": 4000,
+          "currency": "UYU",
+          "image": "../img/px/prod70002_1.jpg"
+      },
+      {
+          "id":70004,
+          "name":"Aire acondicionado PANAVOX 17.000 btu",
+          "cost": 14000,
+          "currency": "UYU",
+          "image": "../img/px/prod70004_1.jpg"
+      }
+  ]
+}

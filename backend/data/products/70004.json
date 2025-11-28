@@ -1,0 +1,36 @@
+{
+  "id": 70004,
+  "name": "Aire acondicionado PANAVOX 17.000 btu",
+  "description": "Timer. Función turbo. Oscilación. Smart. Dry. Memoria para posición de aletas Temperatura regulable entre 16° y 32°.",
+  "cost": 14000,
+  "currency": "UYU",
+  "soldCount": 33,
+  "category": "Electrodomésticos",
+  "images": [
+      "../img/px/prod70004_1.png",
+      "../img/px/prod70004_2.jpg"
+  ],
+  "relatedProducts": [
+    {
+          "id":70001,
+          "name":"Lavarropas JAMES LR 1006 G3/G4",
+          "cost": 10000,
+          "currency": "UYU",
+          "image": "../img/px/prod70001_1.jpg"
+      },
+      {
+          "id":70003,
+          "name":"Refrigerador PANAVOX RFS-54 INV N",
+          "cost": 20000,
+          "currency": "UYU",
+          "image": "../img/px/prod70003_1.webp"
+      },
+      {
+          "id":70005,
+          "name":"Lavavajilla PANAVOX WQP8 Silver",
+          "cost": 12000,
+          "currency": "UYU",
+          "image": "../img/px/prod70005_1.jpg"
+      }
+  ]
+}

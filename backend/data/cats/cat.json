@@ -1,0 +1,58 @@
+[
+  {
+    "id": 101,
+    "name": "Automóviles",
+    "description": "Los mejores precios en automóviles BYD nuevos.",
+    "productCount": "5",
+    "imgSrc": "../img/px/cat101_1.jpg"
+  },
+  {
+    "id": 102,
+    "name": "Juguetes",
+    "description": "Encuentra aquí los mejores precios para niño@s de cualquier edad.",
+    "productCount": "3",
+    "imgSrc": "../img/px/cat102_1.jpg"
+  },
+  {
+    "id": 103,
+    "name": "Muebles",
+    "description": "Todo para amueblar tu casa.",
+    "productCount": "4",
+    "imgSrc": "../img/px/cat103_1.jpg"
+  },
+  {
+    "id": 104,
+    "name": "Herramientas",
+    "description": "Herramientas para cualquier tipo de trabajo.",
+    "productCount": "6",
+    "imgSrc": "../img/px/cat104_1.jpg"
+  },
+  {
+    "id": 105,
+    "name": "Tecnología",
+    "description": "¿Necesitas una computadora nueva?, ¿o un celular?, ¿qué tal unos auriculares? Aquí los encuentras.",
+    "productCount": "6",
+    "imgSrc": "../img/px/cat105_1.jpg"
+  },
+  {
+    "id": 106,
+    "name": "Vestimenta",
+    "description": "Gran variedad de ropa nueva.",
+    "productCount": "0",
+    "imgSrc": "../img/px/cat106_1.jpg"
+  },
+  {
+    "id": 107,
+    "name": "Electrodomésticos",
+    "description": "Encuentra lo mejor para equipar tu casa.",
+    "productCount": "6",
+    "imgSrc": "../img/px/cat107_1.jpg"
+  },
+  {
+    "id": 108,
+    "name": "Deporte",
+    "description": "Variedad de equipamiento para todo tipo de deporte.",
+    "productCount": "6",
+    "imgSrc": "../img/px/cat108_1.jpg"
+  }
+]

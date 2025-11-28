@@ -1,0 +1,35 @@
+{
+  "id": 70001,
+  "name": "Lavarropas JAMES LR 1006 G3/G4",
+  "description": "Modelo LR 1006 G4 BL. Color blanco. Capacidad de 6 kg de ropa seca. Modelo SLIM compacto (ideal para espacios reducidos). 15 programas. Lavado rápido 15 minutos.",
+  "cost": 10000,
+  "currency": "UYU",
+  "soldCount": 32,
+  "category": "Electrodomésticos",
+  "images": [
+      "../img/px/prod70001_1.jpg"
+  ],
+  "relatedProducts": [
+    {
+          "id":70002,
+          "name":"Microondas PANAVOX",
+          "cost": 4000,
+          "currency": "UYU",
+          "image": "../img/px/prod70002_1.jpg"
+      },
+      {
+          "id":70003,
+          "name":"Refrigerador PANAVOX RFS-54 INV N",
+          "cost": 20000,
+          "currency": "UYU",
+          "image": "../img/px/prod70003_1.webp"
+      },
+      {
+          "id":70004,
+          "name":"Aire acondicionado PANAVOX 17.000 btu",
+          "cost": 14000,
+          "currency": "UYU",
+          "image": "../img/px/prod70004_1.jpg"
+      }
+  ]
+}

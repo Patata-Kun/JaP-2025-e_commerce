@@ -1,0 +1,38 @@
+{
+  "id": 50005,
+  "name": "PlayStation 5 Slim Standard – 1 TB",
+  "category": "Tecnología",
+  "description": "Explora las increíbles posibilidades de juego con la consola PlayStation®5, que supera lo extraordinario.",
+  "cost": 859,
+  "currency": "USD",
+  "soldCount": 16,
+  "images": [
+    "../img/px/prod50005_1.jpg",
+    "../img/px/prod50005_2.jpg",
+    "../img/px/prod50005_3.jpg"
+
+  ],
+  "relatedProducts": [
+    {
+      "id": 50002,
+      "name": "MacBook Pro M4 - 14 pulgadas",
+      "cost": 1149,
+      "currency": "USD",
+      "image": "../img/px/prod50002_1.jpg"
+    },
+    {
+      "id": 50001,
+      "name": "PC de escritorio",
+      "cost": 2599,
+      "currency": "USD",
+      "image": "../img/px/prod50001_1.jpg"
+    },
+    {
+      "id": 50004,
+      "name": "Tocadiscos Audio-Technica AT-LP60X",
+      "cost": 219,
+      "currency": "USD",
+      "image": "../img/px/prod50004_1.jpg"
+    }
+  ]
+}

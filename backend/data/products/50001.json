@@ -1,0 +1,48 @@
+{
+  "id": 50001,
+  "name": "PC de escritorio",
+  "category": "Tecnología",
+  "description": [
+    "Gabinete -> Fractal Design North – Cristal templado.",
+    "Placa base -> Gigabyte Aorus B850.",
+    "CPU -> AMD Ryzen 7 9800X3D.",
+    "GPU -> GeForce RTX 5080 Founders Edition (16 GB).",
+    "RAM -> Kingston Fury Beast 32 GB DDR5 (16x2) a 5600 MHz.",
+    "Almacenamiento -> Kingston Fury Renegade M.2 1 TB."
+  ],
+  "cost": 2599,
+  "currency": "USD",
+  "soldCount": 11,
+  "images": [
+      "../img/px/prod50001_1.jpg",
+      "../img/px/prod50001_2.jpg",
+      "../img/px/prod50001_3.jpg"
+  ],
+  "relatedProducts": [
+    {
+      "id": 50005,
+      "name": "PlayStation 5 Slim Standard – 1 TB",
+      "cost": 859,
+      "currency": "USD",
+      "image": "../img/px/prod50005_1.jpg"
+    },
+    {
+      "id": 50002,
+      "name": "MacBook Pro M4 – 14\"",
+      "cost": 1149,
+      "currency": "USD",
+      "image": "../img/px/prod50002_1.jpg"
+    },
+    {
+      "id": 50006,
+      "name": "Samsung Galaxy XR",
+      "cost": 1799,
+      "currency": "USD",
+      "image": "../img/px/prod50006_1.jpg"
+    }
+  ],
+  "color": [
+    "Charcoal black",
+    "Chalk white"
+  ]
+}

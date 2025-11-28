@@ -1,0 +1,37 @@
+{
+  "id": 40002,
+  "name": "Hidrolavadora NAPPO",
+  "description": "Ideal para lavar automóviles, botes, patios, entrada de vehículos. Batería de 1300mAh. Presión de trabajo máxima de 430PSI.",
+  "cost": 1200,
+  "currency": "UYU",
+  "soldCount": 21,
+  "category": "Herramientas",
+  "images": [
+      "../img/px/prod40002_1.webp",
+      "../img/px/prod40002_2.webp",
+      "../img/px/prod40002_3.webp"
+  ],
+  "relatedProducts": [
+    {
+          "id":40001,
+          "name":"Lustra Pulidora BLACK DECKER",
+          "cost": 10000,
+          "currency": "UYU",
+          "image": "../img/px/prod40001_1.webp"
+      },
+      {
+          "id":40003,
+          "name":"Cortadora de Césped NAPPO",
+          "cost": 4500,
+          "currency": "UYU",
+          "image": "../img/px/prod40003_1.webp"
+      },
+      {
+          "id":40004,
+          "name":"Escalera de Acero de Carbono Plegable",
+          "cost": 2500,
+          "currency": "UYU",
+          "image": "../img/px/prod40004_1.webp"
+      }
+  ]
+}
