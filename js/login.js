@@ -2,16 +2,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const loginForm = document.getElementById("login-form");
 
-  loginForm.addEventListener("submit", (e) => {
+  loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const username = document.getElementById("user").value.trim();
     const password = document.getElementById("password").value.trim();
 
     if (username !== "" && password !== "") {
-      localStorage.setItem("user", username);
-      localStorage.setItem("auth", true);
-      window.location.href = "../index.html";
+      
+      const response = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        localStorage.setItem("token", data.token);
+        window.location.href = "../index.html";
+      } else {
+        alert("Usuario o contraseña incorrectos");
+      }
     }
   });
-}); 
+});
