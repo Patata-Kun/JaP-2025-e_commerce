@@ -19,7 +19,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
 
   try {
-    const response = await fetch(productInfoURL + localStorage.getItem('ProdID') + '.json');
+      const response = await fetch(productInfoURL + localStorage.getItem('ProdID') + '.json', {
+    headers: {
+     Authorization: localStorage.getItem("token")
+   }
+    });
+
 
     if (!response.ok) {throw new Error("Error fetching product data");}
 
@@ -50,7 +55,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
   try {
-    const commentsResponse = await fetch(productCommentsURL + localStorage.getItem('ProdID') + '.json');
+    const commentsResponse = await fetch(productCommentsURL + localStorage.getItem('ProdID') + '.json', {
+  headers: {
+    Authorization: localStorage.getItem("token")
+  }
+});
 
     if (!commentsResponse.ok) {throw new Error("Error fetching product comments");}
 
@@ -198,7 +207,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const ProdID = localStorage.getItem("ProdID");
     if (!ProdID) return;
 
-    const response = await fetch(productInfoURL + ProdID + ".json");
+    const response = await fetch(productInfoURL + ProdID + ".json", {
+  headers: {
+    Authorization: localStorage.getItem("token")
+  }
+    });
     if (!response.ok) return;
     const product = await response.json();
 

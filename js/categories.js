@@ -1,6 +1,10 @@
 // Función para obtener datos JSON
 function getJSONData(url) {
-  return fetch(url)
+  return fetch(url, {
+    headers: {
+      Authorization: localStorage.getItem("token")
+    }
+  })
     .then(response => {
       if (response.ok) {
         return response.json();

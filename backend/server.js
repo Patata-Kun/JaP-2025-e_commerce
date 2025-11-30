@@ -1,18 +1,22 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const jwt = require("jsonwebtoken"); //AQUÍ LE PIDO A NODE.JS QUE IMPORTE LA LIBRERÍA jsonwebtoken Y QUE DESPUÉS LA GUARDE EN UNA VARIABLE.
+const authMiddleware = require("./middleware/auth");
+const jwt = require("jsonwebtoken"); //ACÁ LE PIDO A NODE.JS QUE IMPORTE LA LIBRERÍA jsonwebtoken Y QUE DESPUÉS LA GUARDE EN UNA VARIABLE.
 
 const app = express();
 const PORT = 3000;
 
-// PERMITIR PETICIONES DEL FRONTEND
+//PERMITIR PETICIONES DEL FRONTEND
 app.use(cors());
-app.use(express.json()); //ESTO PERMITE QUE express PUEDA ENTENDER/LEER LO QUE LE MANDO DESDE EL FRONTEND. SIN EL express.json() EL BACKEND NO LO ENTIENDE, SIN EMBARGO CON, LO CONVIERTE EN UN OBJETO Y LO PUEDO USAR. 
+app.use(express.json()); //ESTO PERMITE QUE EXORESS PUEDA ENTENDER/LEER LO QUE LE MANDO DESDE EL FRONTEND. SIN EL express.json() EL BACKEND NO LO ENTIENDE
 
+//ACTIVAR MIDDLEWARE
+app.use("/api", authMiddleware);
 
-// SERVIR TODA LA CARPETA /data COMO API
+//RUTAS PROTEGIDAS
 app.use("/api", express.static(path.join(__dirname, "data")));
+
 
 
 

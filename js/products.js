@@ -14,15 +14,19 @@ function getCarIconPath(iconType) {
 }
 
 // fetch para los productos dentro de una categoría
-fetch(productsURL + '/' + localStorage.getItem('catID') + '.json')
-  .then(response => response.json()) // CONVIERTE LA RESPUESTA A JSON
+fetch(productsURL + '/' + localStorage.getItem('catID') + '.json', {
+  headers: {
+    Authorization: localStorage.getItem("token")
+  }
+})
+  .then(response => response.json())
   .then(data => {
-    currentProductsArray = data.products; // GUARDA LOS PRODUCTOS EN EL ARREGLO GLOBAL
-    renderProducts(currentProductsArray); // MUESTRA LOS PRODUCTOS EN PANTALLA
-    // actualizar el subtítulo de la página según la categoría seleccionada
+    currentProductsArray = data.products;
+    renderProducts(currentProductsArray);
     updateProductPageSubtitle();
   })
   .catch(error => console.error('Error loading category:', error));
+
 
 filterButton.addEventListener('click', () => { // EVENTO AL HACER CLIC EN EL BOTON FILTRAR
   const minPrice = parseFloat(minPriceInput.value) || 0; // OBTIENE EL PRECIO MINIMO (O 0 SI ESTA VACIO)
@@ -101,14 +105,19 @@ function renderProducts(productsList) {
 function updateProductPageSubtitle() {
   const categoriesTitleText = document.getElementById('product-title-text');
 
-  fetch(productsURL + '/' + localStorage.getItem('catID') + '.json')
+  fetch(productsURL + '/' + localStorage.getItem('catID') + '.json', {
+  headers: {
+    Authorization: localStorage.getItem("token")
+    }
+  })
     .then(response => response.json())
-    .then(category => {
-      const catName = category.catName;
-      categoriesTitleText.innerText = `Verás aquí todos los productos de la categoría ${catName ? String(catName).toLowerCase() : ''}.`;
-    })
-    .catch(error => {
-      console.error('Error loading category title:', error);
-    });
+   .then(category => {
+    const catName = category.catName;
+    categoriesTitleText.innerText = `Verás aquí todos los productos de la categoría ${catName ? String(catName).toLowerCase() : ''}.`;
+   })
+  .catch(error => {
+    console.error('Error loading category title:', error);
+  });
+
 }
 
