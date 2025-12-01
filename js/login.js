@@ -19,9 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem("token", data.token);
-        window.location.href = "../index.html";
-      } else {
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("auth", "true");
+    localStorage.setItem("user", username); 
+
+   window.location.href = "../index.html"; 
+  } else {
         alert("Usuario o contraseña incorrectos");
       }
     }
